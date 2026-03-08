@@ -1,0 +1,337 @@
+[
+  {
+    "id": "44517758-fd42-4d3d-857e-4707d62601d1",
+    "title": "Introduction to Python Data Analysis",
+    "description": "Learn the basics of Python data analysis in this beginner-friendly tutorial. Explore key concepts and tools to kickstart your journey into data science.",
+    "category": "Python Data Analysis",
+    "difficulty": "Beginner",
+    "estimated_time_minutes": 30,
+    "content": {
+      "raw_markdown": "# Introduction to Python Data Analysis\n\n*Learn the basics of Python data analysis in this beginner-friendly tutorial. Explore key concepts and tools to kickstart your journey into data science.*\n\n## Learning Objectives\n- Understand the basics of Python data analysis\n- Learn how to manipulate and visualize data using Pandas and Matplotlib\n\n## Key Concepts\n**Data manipulation with Pandas • Data visualization with Matplotlib**\n\n## Detailed Explanation\nIn this tutorial, we will cover the fundamentals of Python data analysis, including data manipulation, visualization, and basic statistical analysis. You will learn how to use popular libraries such as Pandas and Matplotlib to work with data efficiently. By the end, you will have a solid foundation to start exploring and analyzing datasets on your own.",
+      "learning_objectives": [
+        "Understand the basics of Python data analysis",
+        "Learn how to manipulate and visualize data using Pandas and Matplotlib"
+      ],
+      "key_concepts": [
+        "Data manipulation with Pandas",
+        "Data visualization with Matplotlib"
+      ],
+      "primary_language": "Python",
+      "starter_code_language": "python",
+      "practice_tasks": [
+        {
+          "title": "Data Manipulation with Pandas",
+          "description": "Load a sample dataset using Pandas and display the first few rows.",
+          "requirements": [
+            "Basic knowledge of Python"
+          ],
+          "starter_code": "import pandas as pd\n\n# Load the dataset\ndata = pd.read_csv('sample_data.csv')\n\n# Display the first 5 rows of the dataset\nprint(data.head())",
+          "hints": [
+            "Use the 'read_csv()' function to load the dataset",
+            "Check the Pandas documentation for more information"
+          ]
+        },
+        {
+          "title": "Data Visualization with Matplotlib",
+          "description": "Create a simple line plot to visualize a column from the dataset.",
+          "requirements": [
+            "Understanding of data visualization concepts"
+          ],
+          "starter_code": "import matplotlib.pyplot as plt\n\n# Plot a line chart\nplt.plot(data['x'], data['y'])\nplt.xlabel('X-axis label')\nplt.ylabel('Y-axis label')\nplt.title('Title of the Plot')\nplt.show()",
+          "hints": [
+            "Use the 'plot()' function from Matplotlib",
+            "Label your axes and give the plot a title"
+          ]
+        }
+      ],
+      "transcript_text": ""
+    },
+    "quiz": [
+      {
+        "question": "What library is commonly used for data manipulation in Python?",
+        "options": [
+          "A) NumPy",
+          "B) Pandas",
+          "C) Matplotlib",
+          "D) Scikit-learn"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Pandas is a popular library for data manipulation in Python, offering powerful tools for data analysis."
+      }
+    ],
+    "source_video_id": "ukzFI9rgwfU",
+    "source_url": "https://youtu.be/ukzFI9rgwfU",
+    "created_at": "2026-03-08T17:48:11.341Z"
+  },
+  {
+    "id": "e1e63e1f-ba78-44d6-b057-04946d78e5be",
+    "title": "Comprehensive HTML Basics Tutorial",
+    "description": "This tutorial covers the fundamental concepts of HTML (Hypertext Markup Language), the standard language for creating web pages. Whether you're a beginner or looking to refresh your knowledge, this module will guide you through the essentials of HTML.",
+    "difficulty": "Beginner",
+    "estimated_time_minutes": 30,
+    "category": "Web Development",
+    "source_video_id": "vY2xUc4TVmY",
+    "source_url": "https://youtu.be/vY2xUc4TVmY?si=by6kaPEY9JxQHLI9",
+    "created_at": "2026-03-08T16:28:24.416Z",
+    "content": {
+      "raw_markdown": "# Comprehensive HTML Basics Tutorial\n\n*This tutorial covers the fundamental concepts of HTML (Hypertext Markup Language), the standard language for creating web pages. Whether you're a beginner or looking to refresh your knowledge, this module will guide you through the essentials of HTML.*\n\n## Learning Objectives\n- Understand the structure and purpose of HTML\n- Learn about HTML elements and tags\n- Explore how to create headings, paragraphs, lists, and links in HTML\n- Discover the importance of semantic HTML for accessibility and SEO\n\n## Key Concepts\n**HTML structure and elements • Tags and attributes • Semantic HTML • Accessibility and SEO**\n\n## Detailed Explanation\nHTML, or Hypertext Markup Language, is the backbone of web development. It provides the structure for web pages by using a system of tags and elements. An HTML document consists of nested elements that define the content and layout of a webpage. Understanding HTML basics is crucial for anyone interested in building websites. \n\nTo start, let's discuss the basic structure of an HTML document. Every HTML document begins with a `<!DOCTYPE html>` declaration, followed by an opening and closing `<html>` tag. Within the `<html>` tag, you'll find the `<head>` and `<body>` sections. The `<head>` section contains meta-information about the document, such as the title and links to external resources, while the `<body>` section holds the visible content of the webpage. \n\nHTML elements are the building blocks of a webpage. Each element is enclosed in tags, such as `<tagname>` and `</tagname>`. For instance, the `<h1>` tag represents the main heading of a page, while the `<p>` tag is used for paragraphs. Additionally, lists can be created using `<ul>` (unordered list), `<ol>` (ordered list), and `<li>` (list item) tags. Links are created with the `<a>` tag, which includes the `href` attribute for specifying the URL. \n\nSemantic HTML involves using tags that convey the meaning of the content, making the webpage more accessible to users and search engines. For example, using `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` tags helps organize the content in a meaningful way. Semantic HTML improves SEO and ensures that assistive technologies can interpret the content correctly. \n\nIn summary, mastering HTML basics is essential for web development. By understanding the structure of HTML documents, the purpose of elements and tags, and the significance of semantic HTML, you'll be well-equipped to create well-structured and accessible web pages.\n\n## Code Examples\nThis code snippet demonstrates the basic structure of an HTML document, including headings, paragraphs, lists, and links.\n```HTML\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Page Title</title>\n</head>\n<body>\n    <h1>Main Heading</h1>\n    <p>This is a paragraph.</p>\n    <ul>\n        <li>Item 1</li>\n        <li>Item 2</li>\n    </ul>\n    <a href=\"https://www.example.com\">Link Text</a>\n</body>\n</html>\n```\n\n## Best Practices\n- ✅ Always validate your HTML code using tools like the W3C Markup Validation Service.\n- ✅ Use semantic HTML elements to improve accessibility and SEO.\n- ✅ Maintain a consistent and organized structure in your HTML documents.\n\n## Common Pitfalls\n- ❌ Forgetting to close tags properly, which can lead to unexpected layout issues.\n- ❌ Neglecting to use semantic HTML, resulting in poor accessibility and SEO performance.\n- ❌ Overusing non-semantic tags like <div> for structuring content, instead of using appropriate semantic tags.\n\n## Real World Applications\n- 🌍 Creating personal websites or portfolios\n- 🌍 Developing e-commerce platforms\n- 🌍 Building informational websites for businesses",
+      "primary_language": "HTML",
+      "starter_code_language": "HTML",
+      "learning_objectives": [
+        "Understand the structure and purpose of HTML",
+        "Learn about HTML elements and tags",
+        "Explore how to create headings, paragraphs, lists, and links in HTML",
+        "Discover the importance of semantic HTML for accessibility and SEO"
+      ],
+      "key_concepts": [
+        "HTML structure and elements",
+        "Tags and attributes",
+        "Semantic HTML",
+        "Accessibility and SEO"
+      ],
+      "detailed_content": "HTML, or Hypertext Markup Language, is the backbone of web development. It provides the structure for web pages by using a system of tags and elements. An HTML document consists of nested elements that define the content and layout of a webpage. Understanding HTML basics is crucial for anyone interested in building websites. \n\nTo start, let's discuss the basic structure of an HTML document. Every HTML document begins with a `<!DOCTYPE html>` declaration, followed by an opening and closing `<html>` tag. Within the `<html>` tag, you'll find the `<head>` and `<body>` sections. The `<head>` section contains meta-information about the document, such as the title and links to external resources, while the `<body>` section holds the visible content of the webpage. \n\nHTML elements are the building blocks of a webpage. Each element is enclosed in tags, such as `<tagname>` and `</tagname>`. For instance, the `<h1>` tag represents the main heading of a page, while the `<p>` tag is used for paragraphs. Additionally, lists can be created using `<ul>` (unordered list), `<ol>` (ordered list), and `<li>` (list item) tags. Links are created with the `<a>` tag, which includes the `href` attribute for specifying the URL. \n\nSemantic HTML involves using tags that convey the meaning of the content, making the webpage more accessible to users and search engines. For example, using `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` tags helps organize the content in a meaningful way. Semantic HTML improves SEO and ensures that assistive technologies can interpret the content correctly. \n\nIn summary, mastering HTML basics is essential for web development. By understanding the structure of HTML documents, the purpose of elements and tags, and the significance of semantic HTML, you'll be well-equipped to create well-structured and accessible web pages.",
+      "code_examples": [
+        {
+          "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Page Title</title>\n</head>\n<body>\n    <h1>Main Heading</h1>\n    <p>This is a paragraph.</p>\n    <ul>\n        <li>Item 1</li>\n        <li>Item 2</li>\n    </ul>\n    <a href=\"https://www.example.com\">Link Text</a>\n</body>\n</html>",
+          "explanation": "This code snippet demonstrates the basic structure of an HTML document, including headings, paragraphs, lists, and links.",
+          "language": "HTML"
+        }
+      ],
+      "practice_tasks": [
+        {
+          "title": "Objective 1",
+          "description": "Implement the concept: Understand the structure and purpose of HTML",
+          "requirements": [
+            "Understand the structure and purpose of HTML"
+          ],
+          "starter_code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>My First Web Page</title>\n</head>\n<body>\n    <h1>Welcome to My Website</h1>\n    <p>This is a sample paragraph.</p>\n</body>\n</html>",
+          "hints": [
+            "Try breaking the problem down."
+          ]
+        },
+        {
+          "title": "Objective 2",
+          "description": "Implement the concept: Learn about HTML elements and tags",
+          "requirements": [
+            "Learn about HTML elements and tags"
+          ],
+          "starter_code": "// Continue implementation here\n",
+          "hints": [
+            "Try breaking the problem down."
+          ]
+        },
+        {
+          "title": "Objective 3",
+          "description": "Implement the concept: Explore how to create headings, paragraphs, lists, and links in HTML",
+          "requirements": [
+            "Explore how to create headings, paragraphs, lists, and links in HTML"
+          ],
+          "starter_code": "// Continue implementation here\n",
+          "hints": [
+            "Try breaking the problem down."
+          ]
+        },
+        {
+          "title": "Objective 4",
+          "description": "Implement the concept: Discover the importance of semantic HTML for accessibility and SEO",
+          "requirements": [
+            "Discover the importance of semantic HTML for accessibility and SEO"
+          ],
+          "starter_code": "// Continue implementation here\n",
+          "hints": [
+            "Try breaking the problem down."
+          ]
+        }
+      ],
+      "concept_graph": {
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Comprehensive HTML Basics Tutorial",
+            "type": "Start"
+          },
+          {
+            "id": "2",
+            "label": "HTML Structure and Elements",
+            "type": "Process"
+          },
+          {
+            "id": "3",
+            "label": "Tags and Attributes",
+            "type": "Process"
+          },
+          {
+            "id": "4",
+            "label": "Semantic HTML",
+            "type": "Process"
+          },
+          {
+            "id": "5",
+            "label": "Accessibility and SEO",
+            "type": "Process"
+          },
+          {
+            "id": "6",
+            "label": "End of Tutorial",
+            "type": "End"
+          }
+        ],
+        "edges": [
+          {
+            "id": "e1-2",
+            "source": "1",
+            "target": "2",
+            "label": "covers"
+          },
+          {
+            "id": "e2-3",
+            "source": "2",
+            "target": "3",
+            "label": "includes"
+          },
+          {
+            "id": "e2-4",
+            "source": "2",
+            "target": "4",
+            "label": "introduces"
+          },
+          {
+            "id": "e2-5",
+            "source": "2",
+            "target": "5",
+            "label": "addresses"
+          },
+          {
+            "id": "e3-6",
+            "source": "3",
+            "target": "6",
+            "label": "concludes"
+          },
+          {
+            "id": "e4-6",
+            "source": "4",
+            "target": "6",
+            "label": "concludes"
+          },
+          {
+            "id": "e5-6",
+            "source": "5",
+            "target": "6",
+            "label": "concludes"
+          }
+        ]
+      }
+    },
+    "quiz": {
+      "title": "Module Quiz",
+      "difficulty": "intermediate",
+      "timeLimit": 300,
+      "questions": [
+        {
+          "id": "q1",
+          "type": "multiple_choice",
+          "question": "What does HTML stand for?",
+          "options": [
+            "Hypertext Markup Language",
+            "Hyperlink and Text Markup Language",
+            "Hypertext Multi Language",
+            "Hypertext Marking Language"
+          ],
+          "correctAnswer": 0,
+          "explanation": "HTML stands for Hypertext Markup Language, which is the standard language for creating web pages."
+        },
+        {
+          "id": "q2",
+          "type": "multiple_choice",
+          "question": "Which tag is used to create a main heading in HTML?",
+          "options": [
+            "<h1>",
+            "<heading>",
+            "<main>",
+            "<title>"
+          ],
+          "correctAnswer": 0,
+          "explanation": "The <h1> tag is used to define the main heading of a webpage."
+        },
+        {
+          "id": "q3",
+          "type": "multiple_choice",
+          "question": "What is the purpose of the <head> section in an HTML document?",
+          "options": [
+            "To display visible content",
+            "To contain meta-information about the document",
+            "To create links",
+            "To define the main heading"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The <head> section contains meta-information about the document, such as the title and links to external resources."
+        },
+        {
+          "id": "q4",
+          "type": "multiple_choice",
+          "question": "Which of the following is an example of semantic HTML?",
+          "options": [
+            "<div>",
+            "<span>",
+            "<header>",
+            "<b>"
+          ],
+          "correctAnswer": 2,
+          "explanation": "The <header> tag is an example of semantic HTML as it defines a header for a document or section."
+        },
+        {
+          "id": "q5",
+          "type": "multiple_choice",
+          "question": "What attribute is essential for creating a link with the <a> tag?",
+          "options": [
+            "src",
+            "href",
+            "link",
+            "url"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The href attribute is essential for specifying the URL of the page the link goes to."
+        },
+        {
+          "id": "q6",
+          "type": "multiple_choice",
+          "question": "What is a common pitfall in HTML coding?",
+          "options": [
+            "Using semantic tags",
+            "Closing tags properly",
+            "Neglecting to use semantic HTML",
+            "Validating the code"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Neglecting to use semantic HTML can result in poor accessibility and SEO performance."
+        },
+        {
+          "id": "q7",
+          "type": "multiple_choice",
+          "question": "Which of the following tags is used to create an ordered list?",
+          "options": [
+            "<ul>",
+            "<ol>",
+            "<li>",
+            "<list>"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The <ol> tag is used to create an ordered list in HTML."
+        },
+        {
+          "id": "q8",
+          "type": "multiple_choice",
+          "question": "What is the main benefit of using semantic HTML?",
+          "options": [
+            "Improved aesthetics",
+            "Better code validation",
+            "Enhanced accessibility and SEO",
+            "Faster page load times"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Using semantic HTML improves accessibility for users and helps search engines understand the content better, enhancing SEO."
+        }
+      ]
+    }
+  }
+]
