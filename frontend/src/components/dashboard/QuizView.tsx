@@ -427,12 +427,11 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
 
                 <div className="max-w-4xl mx-auto flex flex-col items-center justify-center w-full flex-1">
                     <div
-                        className="flex items-center justify-center rounded-3xl mx-auto mb-6 shrink-0 shadow-sm border border-indigo-500/20"
-                        style={{ width: 80, height: 80, background: 'rgba(99,102,241,0.1)' }}
+                        className="flex items-center justify-center rounded-3xl mx-auto mb-6 shrink-0 shadow-sm border border-indigo-500/20 w-20 h-20 bg-indigo-500/10"
                     >
-                        <Brain size={40} style={{ color: '#818cf8' }} />
+                        <Brain size={40} className="text-indigo-400" />
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-display font-bold mb-4 text-foreground shrink-0" style={{ lineHeight: 1.3 }}>
+                    <h1 className="text-3xl md:text-4xl font-display font-bold mb-4 text-foreground shrink-0 leading-tight">
                         {quiz.title}
                     </h1>
 
@@ -520,17 +519,13 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
 
                 <div className="max-w-4xl mx-auto w-full">
                     {/* Score card */}
-                    <div className="text-center mb-8 py-10 shadow-lg rounded-3xl" style={{ background: 'hsl(var(--card))', border: '1px solid var(--border)' }}>
+                    <div className="text-center mb-8 py-10 shadow-lg rounded-3xl bg-card border border-border">
                         <div
-                            className="flex items-center justify-center rounded-2xl mx-auto mb-4"
-                            style={{
-                                width: 80, height: 80,
-                                background: passed ? 'rgba(16,185,129,0.15)' : 'rgba(244,63,94,0.15)',
-                            }}
+                            className={`flex items-center justify-center rounded-2xl mx-auto mb-4 w-20 h-20 ${passed ? 'bg-emerald-500/15' : 'bg-rose-500/15'}`}
                         >
                             {passed
-                                ? <Trophy size={40} style={{ color: '#10b981' }} />
-                                : <AlertCircle size={40} style={{ color: '#f43f5e' }} />
+                                ? <Trophy size={40} className="text-emerald-500" />
+                                : <AlertCircle size={40} className="text-rose-500" />
                             }
                         </div>
 
@@ -544,8 +539,7 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
                         </p>
 
                         <div
-                            className="text-6xl font-bold mb-2"
-                            style={{ color: passed ? '#10b981' : '#f43f5e' }}
+                            className={`text-6xl font-bold mb-2 ${passed ? 'text-emerald-500' : 'text-rose-500'}`}
                         >
                             {scorePercent}%
                         </div>
@@ -555,29 +549,26 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
 
                         <div className="w-64 h-3 rounded-full mx-auto mb-6 bg-secondary overflow-hidden">
                             <div
-                                className="h-full"
-                                style={{
-                                    width: `${scorePercent}%`,
-                                    background: passed ? '#10b981' : '#f43f5e',
-                                }}
+                                className={`h-full ${passed ? 'bg-emerald-500' : 'bg-rose-500'}`}
+                                style={{ width: `${scorePercent}%` }}
                             />
                         </div>
 
                         <div className="flex gap-3 justify-center">
-                            <button onClick={() => {
+                            <button type="button" onClick={() => {
                                 setCurrentModuleId(null);
                                 setQuizState('dashboard');
                             }} className="bg-secondary text-foreground px-6 py-3 rounded-xl hover:bg-secondary/80 flex items-center gap-2 font-medium">
                                 <ChevronLeft size={16} /> Back to Dashboard
                             </button>
-                            <button onClick={handleRestart} className="bg-primary text-primary-foreground px-6 py-3 rounded-xl hover:bg-primary/90 flex items-center gap-2 font-medium">
+                            <button type="button" onClick={handleRestart} className="bg-primary text-primary-foreground px-6 py-3 rounded-xl hover:bg-primary/90 flex items-center gap-2 font-medium">
                                 <RotateCcw size={16} /> Retry Quiz
                             </button>
                         </div>
                     </div>
 
                     {/* Answer review */}
-                    <div className="shadow-sm p-8 rounded-3xl" style={{ background: 'hsl(var(--card))', border: '1px solid var(--border)' }}>
+                    <div className="shadow-sm p-8 rounded-3xl bg-card border border-border">
                         <h3 className="text-xl font-semibold mb-6 text-foreground">
                             Review Answers
                         </h3>
@@ -588,16 +579,12 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
                                 return (
                                     <div
                                         key={q.id}
-                                        className="p-4 rounded-xl"
-                                        style={{
-                                            background: isCorrect ? 'rgba(16,185,129,0.08)' : 'rgba(244,63,94,0.08)',
-                                            border: `1px solid ${isCorrect ? 'rgba(16,185,129,0.25)' : 'rgba(244,63,94,0.25)'}`,
-                                        }}
+                                        className={`p-4 rounded-xl ${isCorrect ? 'bg-emerald-500/8 border border-emerald-500/25' : 'bg-rose-500/8 border border-rose-500/25'}`}
                                     >
                                         <div className="flex items-start gap-3 mb-3">
                                             {isCorrect
-                                                ? <CheckCircle size={16} style={{ color: '#10b981', flexShrink: 0, marginTop: 2 }} />
-                                                : <XCircle size={16} style={{ color: '#f43f5e', flexShrink: 0, marginTop: 2 }} />
+                                                ? <CheckCircle size={16} className="text-emerald-500 shrink-0 mt-0.5" />
+                                                : <XCircle size={16} className="text-rose-500 shrink-0 mt-0.5" />
                                             }
                                             <p className="text-sm font-medium text-foreground">
                                                 Q{i + 1}. {q.question.split('\\n')[0]}
@@ -606,15 +593,15 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
                                         {!isCorrect && (
                                             <div className="text-xs mb-2 pl-7">
                                                 <span className="text-muted-foreground tracking-wide">YOUR ANSWER: </span>
-                                                <span style={{ color: '#fb7185' }}>
+                                                <span className="text-rose-400">
                                                     {userAnswer !== null && userAnswer !== undefined ? q.options[userAnswer] : 'Not answered'}
                                                 </span>
                                                 <br />
                                                 <span className="text-muted-foreground tracking-wide">CORRECT: </span>
-                                                <span style={{ color: '#34d399' }}>{q.options[q.correctAnswer]}</span>
+                                                <span className="text-emerald-400">{q.options[q.correctAnswer]}</span>
                                             </div>
                                         )}
-                                        <p className="text-xs pl-7 mt-2" style={{ color: 'var(--text-muted)' }}>
+                                        <p className="text-xs pl-7 mt-2 text-muted-foreground">
                                             💡 {q.explanation}
                                         </p>
                                     </div>
@@ -685,16 +672,16 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
                     </span>
                 </div>
 
-                <div className="text-base font-medium text-foreground shrink-0 mb-4" style={{ lineHeight: 1.5 }}>
+                <div className="text-base font-medium text-foreground shrink-0 mb-4 leading-relaxed">
                     {(() => {
                         const parts = question.question.split('\`\`\`');
                         if (parts.length === 1) {
-                            return <p style={{ whiteSpace: 'pre-wrap', margin: 0 }}>{parts[0]}</p>;
+                            return <p className="whitespace-pre-wrap m-0">{parts[0]}</p>;
                         }
 
                         return parts.map((part: string, idx: number) => {
                             if (idx % 2 === 0) {
-                                return part.trim() ? <p key={idx} className="mb-4" style={{ whiteSpace: 'pre-wrap', margin: 0 }}>{part.trim()}</p> : null;
+                                return part.trim() ? <p key={idx} className="mb-4 whitespace-pre-wrap m-0">{part.trim()}</p> : null;
                             } else {
                                 const codeLines = part.trim().split('\\n');
                                 const firstLine = codeLines[0].trim();
@@ -706,9 +693,9 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
                                     <div key={idx} className="my-8 rounded-2xl overflow-hidden shadow-2xl w-full border border-border/50 bg-[#1e1e1e]">
                                         <div className="flex items-center px-5 py-4 border-b border-white/10 relative bg-[#2d2d2d]">
                                             <div className="flex gap-2">
-                                                <div className="w-3.5 h-3.5 rounded-full" style={{ background: '#ff5f56' }}></div>
-                                                <div className="w-3.5 h-3.5 rounded-full" style={{ background: '#ffbd2e' }}></div>
-                                                <div className="w-3.5 h-3.5 rounded-full" style={{ background: '#27c93f' }}></div>
+                                                <div className="w-3.5 h-3.5 rounded-full bg-[#ff5f56]"></div>
+                                                <div className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e]"></div>
+                                                <div className="w-3.5 h-3.5 rounded-full bg-[#27c93f]"></div>
                                             </div>
                                             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                                 {lang && <span className="text-sm font-mono tracking-wider uppercase font-bold text-white/40">{lang}</span>}
@@ -716,7 +703,7 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
                                         </div>
                                         <div className="p-8 overflow-x-auto text-left">
                                             <pre className="m-0 bg-transparent p-0">
-                                                <code className="font-mono text-sm leading-relaxed text-[#e2e8f0]" style={{ whiteSpace: 'pre' }}>
+                                                <code className="font-mono text-sm leading-relaxed text-[#e2e8f0] whitespace-pre">
                                                     {code}
                                                 </code>
                                             </pre>
@@ -731,53 +718,41 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
                 {/* Options */}
                 <div className="space-y-2.5 mt-4">
                     {question.options.map((option: any, i: number) => {
-                        let borderColor = 'var(--border)';
-                        let bg = 'transparent';
-                        let textColor = 'var(--muted-foreground)';
-
-                        if (showExplanation) {
-                            if (i === question.correctAnswer) {
-                                borderColor = 'rgba(16,185,129,0.5)';
-                                bg = 'rgba(16,185,129,0.1)';
-                                textColor = '#34d399';
-                            } else if (i === selectedOption && i !== question.correctAnswer) {
-                                borderColor = 'rgba(244,63,94,0.5)';
-                                bg = 'rgba(244,63,94,0.1)';
-                                textColor = '#fb7185';
-                            }
-                        } else if (i === selectedOption) {
-                            borderColor = 'rgba(99,102,241,0.6)';
-                            bg = 'rgba(99,102,241,0.15)';
-                            textColor = '#818cf8';
-                        }
+                        const isCorrect = showExplanation && i === question.correctAnswer;
+                        const isWrong = showExplanation && i === selectedOption && i !== question.correctAnswer;
+                        const isSelected = !showExplanation && i === selectedOption;
 
                         return (
                             <button
+                                type="button"
                                 key={i}
                                 onClick={() => handleSelect(i)}
-                                className="w-full text-left p-4 rounded-xl transition-all duration-300 flex items-center gap-4 group hover:-translate-y-0.5 shadow-sm"
-                                style={{
-                                    background: bg !== 'transparent' ? bg : 'hsl(var(--card))',
-                                    border: `1px solid ${borderColor}`,
-                                    color: textColor,
-                                    cursor: showExplanation ? 'default' : 'pointer',
-                                }}
+                                disabled={showExplanation}
+                                className={`w-full text-left p-4 rounded-xl transition-all duration-300 flex items-center gap-4 group hover:-translate-y-0.5 shadow-sm ${
+                                    isCorrect ? 'bg-emerald-500/10 border border-emerald-500/50' :
+                                    isWrong ? 'bg-rose-500/10 border border-rose-500/50' :
+                                    isSelected ? 'bg-indigo-500/15 border border-indigo-500/60' :
+                                    'bg-card border border-border'
+                                } ${showExplanation ? 'cursor-default' : 'cursor-pointer'}`}
                             >
                                 <span
-                                    className="flex-shrink-0 flex items-center justify-center rounded-lg text-sm font-bold shadow-sm border border-border/50"
-                                    style={{
-                                        width: 32, height: 32,
-                                        background: i === selectedOption && !showExplanation ? 'rgba(99,102,241,0.15)' : 'hsl(var(--secondary)/0.5)',
-                                    }}
+                                    className={`flex-shrink-0 flex items-center justify-center rounded-lg text-sm font-bold shadow-sm border border-border/50 w-8 h-8 ${
+                                        isSelected ? 'bg-indigo-500/15' : 'bg-secondary/50'
+                                    }`}
                                 >
                                     {['A', 'B', 'C', 'D'][i]}
                                 </span>
-                                <span className="text-base flex-1 font-medium text-foreground" style={{ lineHeight: 1.4 }}>{option}</span>
-                                {showExplanation && i === question.correctAnswer && (
-                                    <CheckCircle size={20} className="ml-auto flex-shrink-0" style={{ color: '#10b981' }} />
+                                <span className={`text-base flex-1 font-medium leading-snug ${
+                                    isCorrect ? 'text-emerald-400' :
+                                    isWrong ? 'text-rose-400' :
+                                    isSelected ? 'text-indigo-400' :
+                                    'text-foreground'
+                                }`}>{option}</span>
+                                {isCorrect && (
+                                    <CheckCircle size={20} className="ml-auto flex-shrink-0 text-emerald-500" />
                                 )}
-                                {showExplanation && i === selectedOption && i !== question.correctAnswer && (
-                                    <XCircle size={20} className="ml-auto flex-shrink-0" style={{ color: '#f43f5e' }} />
+                                {isWrong && (
+                                    <XCircle size={20} className="ml-auto flex-shrink-0 text-rose-500" />
                                 )}
                             </button>
                         );
@@ -788,14 +763,13 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
             {/* Explanation */}
             {showExplanation && (
                 <div
-                    className="p-4 rounded-xl mt-6 shadow-sm w-full max-w-4xl fade-in"
-                    style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.25)' }}
+                    className="p-4 rounded-xl mt-6 shadow-sm w-full max-w-4xl fade-in bg-indigo-500/6 border border-indigo-500/25"
                 >
                     <div className="flex items-center gap-2 mb-2">
-                        <Brain size={16} style={{ color: '#818cf8' }} />
-                        <p className="text-xs font-bold uppercase tracking-wider" style={{ color: '#818cf8' }}>AI Explanation</p>
+                        <Brain size={16} className="text-indigo-400" />
+                        <p className="text-xs font-bold uppercase tracking-wider text-indigo-400">AI Explanation</p>
                     </div>
-                    <p className="text-sm font-medium text-foreground" style={{ lineHeight: 1.5 }}>{question.explanation}</p>
+                    <p className="text-sm font-medium text-foreground leading-relaxed">{question.explanation}</p>
                 </div>
             )}
 
@@ -803,18 +777,18 @@ export default function QuizView({ moduleId, onBack }: { moduleId: string | null
             <div className="flex gap-4 justify-end mt-6 w-full max-w-6xl">
                 {!showExplanation ? (
                     <button
+                        type="button"
                         onClick={handleConfirm}
                         disabled={selectedOption === null}
-                        className={`${btnPrimary} px-8 py-3 text-base shadow-md hover:-translate-y-0.5 transition-all`}
-                        style={{ minWidth: '180px' }}
+                        className={`${btnPrimary} px-8 py-3 text-base shadow-md hover:-translate-y-0.5 transition-all min-w-[180px]`}
                     >
                         Confirm Answer
                     </button>
                 ) : (
                     <button
+                        type="button"
                         onClick={handleNext}
-                        className={`${btnPrimary} px-8 py-3 text-base shadow-md hover:-translate-y-0.5 transition-all`}
-                        style={{ minWidth: '180px' }}
+                        className={`${btnPrimary} px-8 py-3 text-base shadow-md hover:-translate-y-0.5 transition-all min-w-[180px]`}
                     >
                         {isLastQuestion ? 'See Results' : 'Next Question'}
                         <ArrowRight size={18} className="ml-2" />

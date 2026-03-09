@@ -64,7 +64,9 @@ const ProjectItem = ({
             onChange={(e) => setEditValue(e.target.value)}
             onBlur={handleSubmit}
             onKeyDown={handleKeyDown}
-            onClick={(e) => e.stopPropagation()} // Prevent triggering project click
+            onClick={(e) => e.stopPropagation()}
+            title="Rename project"
+            placeholder="Project name"
           />
         ) : (
           <span className="font-medium text-sm truncate">{title}</span>
@@ -222,19 +224,20 @@ const Home = () => {
           <div className="flex-1 overflow-y-auto px-4 pt-6 pb-6 scrollbar-thin space-y-8">
             <div className="space-y-2">
               <button
+                type="button"
                 onClick={() => {
                   setActiveView("dashboard");
                   setActiveProject(null);
                 }}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${activeView === "dashboard" || activeView === "structured-lessons"
-                    ? "bg-primary/10 text-primary"
-                    : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground"
+                  ? "bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:bg-secondary/50 hover:text-foreground"
                   }`}
               >
                 <LayoutDashboard size={20} />
                 <span className="font-medium text-sm">Dashboard</span>
               </button>
-              <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-colors">
+              <button type="button" className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-colors">
                 <User size={20} />
                 <span className="font-medium text-sm">Profile</span>
               </button>
@@ -246,16 +249,17 @@ const Home = () => {
                 {/* Sliding Toggle */}
                 <div className="flex bg-secondary/30 p-1 rounded-lg relative">
                   <div
-                    className="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-secondary rounded-md shadow flex border border-border/50 transition-all duration-300 pointer-events-none"
-                    style={{ left: activeTab === 'lessons' ? '4px' : 'calc(50% + 0px)' }}
+                    className={`absolute top-1 bottom-1 w-[calc(50%-4px)] bg-secondary rounded-md shadow flex border border-border/50 transition-all duration-300 pointer-events-none ${activeTab === 'lessons' ? 'left-1' : 'left-[calc(50%+0px)]'}`}
                   />
                   <button
+                    type="button"
                     className={`flex-1 text-xs font-semibold py-1.5 text-center relative z-10 transition-colors ${activeTab === 'lessons' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
                     onClick={() => setActiveTab('lessons')}
                   >
                     Lessons
                   </button>
                   <button
+                    type="button"
                     className={`flex-1 text-xs font-semibold py-1.5 text-center relative z-10 transition-colors ${activeTab === 'projects' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
                     onClick={() => setActiveTab('projects')}
                   >
@@ -315,13 +319,14 @@ const Home = () => {
         {/* Bottom Actions */}
         <div className="p-4 border-t border-border/50 space-y-1">
           <button
+            type="button"
             onClick={() => navigate("/auth")}
             className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-colors"
           >
             <LogOut size={20} />
             <span className="font-medium text-sm">Log out</span>
           </button>
-          <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-colors">
+          <button type="button" className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-secondary/50 hover:text-foreground transition-colors">
             <Settings size={20} />
             <span className="font-medium text-sm">Settings</span>
           </button>
@@ -340,6 +345,7 @@ const Home = () => {
             style={{ top: contextMenu.y, left: contextMenu.x }}
           >
             <button
+              type="button"
               onClick={handleRenameInitiate}
               className="w-full text-left px-4 py-2.5 text-sm font-medium hover:bg-secondary/80 focus:bg-secondary/80 focus:outline-none transition-colors"
             >
@@ -347,6 +353,7 @@ const Home = () => {
             </button>
             <div className="h-px bg-border/50 my-1 mx-2" />
             <button
+              type="button"
               onClick={() => handleDeleteProject()}
               className="w-full text-left px-4 py-2.5 text-sm font-medium text-destructive hover:bg-destructive/10 focus:bg-destructive/10 focus:outline-none transition-colors"
             >
@@ -400,7 +407,9 @@ const Home = () => {
                       </div>
                       <div className="flex flex-col space-y-1 pl-1">
                         <button
-                          onClick={() => {
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
                             const lesson = lessons.find(l => l.title === displayProject);
                             if (lesson) setActiveModuleId(lesson.id);
                             setActiveView("tutorial-modules");
@@ -411,7 +420,9 @@ const Home = () => {
                           Tutorial Modules
                         </button>
                         <button
-                          onClick={() => {
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
                             const lesson = lessons.find(l => l.title === displayProject);
                             if (lesson) setActiveModuleId(lesson.id);
                             setActiveView("structured-lessons");
@@ -431,7 +442,9 @@ const Home = () => {
                       </div>
                       <div className="flex flex-col space-y-0.5 pl-1">
                         <button
-                          onClick={() => {
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
                             const lesson = lessons.find(l => l.title === displayProject);
                             if (lesson) setActiveModuleId(lesson.id);
                             setActiveView("quiz");
@@ -441,7 +454,9 @@ const Home = () => {
                           Quizzes
                         </button>
                         <button
-                          onClick={() => {
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
                             const lesson = lessons.find(l => l.title === displayProject);
                             if (lesson) setActiveModuleId(lesson.id);
                             setActiveView("guided-coding");
@@ -463,10 +478,18 @@ const Home = () => {
                       Build
                     </div>
                     <div className="flex flex-col space-y-0.5 pl-1">
-                      <button className="w-full text-left px-3 py-1.5 rounded-md text-xs font-medium text-foreground/80 hover:bg-secondary hover:text-foreground hover:shadow-sm transition-all">
+                      <button 
+                        type="button"
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-full text-left px-3 py-1.5 rounded-md text-xs font-medium text-foreground/80 hover:bg-secondary hover:text-foreground hover:shadow-sm transition-all"
+                      >
                         Project Guide
                       </button>
-                      <button className="w-full text-left px-3 py-1.5 rounded-md text-xs font-medium text-foreground/80 hover:bg-secondary hover:text-foreground hover:shadow-sm transition-all">
+                      <button 
+                        type="button"
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-full text-left px-3 py-1.5 rounded-md text-xs font-medium text-foreground/80 hover:bg-secondary hover:text-foreground hover:shadow-sm transition-all"
+                      >
                         Build-with-me Coding
                       </button>
                     </div>
@@ -481,7 +504,9 @@ const Home = () => {
                   </div>
                   <div className="flex flex-col space-y-0.5 pl-1">
                     <button
-                      onClick={() => {
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
                         const lesson = lessons.find(l => l.title === displayProject);
                         if (lesson) setActiveModuleId(lesson.id);
                         setActiveView("tutorial-modules");
@@ -502,7 +527,9 @@ const Home = () => {
                   </div>
                   <div className="flex flex-col space-y-0.5 pl-1">
                     <button
-                      onClick={() => {
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
                         const lesson = lessons.find(l => l.title === displayProject);
                         if (lesson) setActiveModuleId(lesson.id);
                         setActiveView("project-flowchart");
@@ -532,8 +559,15 @@ const Home = () => {
         ) : activeView === "tutorial-modules" ? (
           <TutorialModules
             onAnalysisComplete={(newId) => {
-              fetchModules();
-              if (newId) setActiveModuleId(newId);
+              fetchModules(); // Auto-refresh module list
+              if (newId) {
+                setActiveModuleId(newId);
+                // Auto-select the new module in sidebar
+                const newModule = lessons.find(l => l.id === newId);
+                if (newModule) {
+                  setActiveProject(newModule.title);
+                }
+              }
             }}
             initialModuleId={activeModuleId}
             initialTab={tutorialTab}
@@ -550,7 +584,7 @@ const Home = () => {
             }}
             onStartGuidedLearning={(id) => {
               setActiveModuleId(id);
-              setActiveView("guided-learning");
+              setActiveView("tutorial-modules");
             }}
             onBackToVideo={() => setActiveView("tutorial-modules")}
           />
@@ -572,6 +606,7 @@ const Home = () => {
         ) : activeView === "guided-learning" ? (
           <div className="flex flex-col h-full fade-in relative">
             <button
+              type="button"
               onClick={() => setActiveView("structured-lessons")}
               className="absolute top-4 left-4 p-2 rounded-xl bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-foreground transition-all flex items-center justify-center border border-border/50 shadow-sm shrink-0 z-50"
               title="Back to Dashboard"
@@ -598,7 +633,7 @@ const Home = () => {
             }}
             onStartGuidedLearning={(id) => {
               setActiveModuleId(id);
-              setActiveView("guided-learning");
+              setActiveView("tutorial-modules");
             }}
             onBackToVideo={() => setActiveView("tutorial-modules")}
           />

@@ -247,6 +247,7 @@ const TutorialModules = ({
                 <div className="flex items-center justify-between px-6 border-b border-primary/10 h-14 shrink-0">
                   <div className="flex items-center gap-4 h-full">
                     <button
+                      type="button"
                       onClick={() => setActiveTab('summary')}
                       className={`h-full px-2 text-sm font-semibold flex items-center gap-2 border-b-2 transition-all ${activeTab === 'summary'
                         ? 'border-primary text-primary'
@@ -256,6 +257,7 @@ const TutorialModules = ({
                       <Sparkles size={16} /> AI Summary
                     </button>
                     <button
+                      type="button"
                       onClick={() => setActiveTab('chat')}
                       className={`h-full px-2 text-sm font-semibold flex items-center gap-2 border-b-2 transition-all ${activeTab === 'chat'
                         ? 'border-primary text-primary'
@@ -268,16 +270,20 @@ const TutorialModules = ({
 
                   <div className="flex items-center gap-2">
                     <button
+                      type="button"
                       onClick={() => setIsMaximized(!isMaximized)}
                       className="p-1.5 rounded-lg hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all flex items-center justify-center"
                       title={isMaximized ? "Exit Fullscreen" : "Maximize"}
+                      aria-label={isMaximized ? "Exit Fullscreen" : "Maximize"}
                     >
                       {isMaximized ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
                     </button>
                     {isMaximized && (
                       <button
+                        type="button"
                         onClick={() => setIsMaximized(false)}
                         className="p-1.5 rounded-lg hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-all flex items-center justify-center"
+                        title="Close"
                       >
                         <X size={18} />
                       </button>
@@ -306,7 +312,7 @@ const TutorialModules = ({
                       className="flex flex-col h-full"
                     >
                       {/* Chat Messages */}
-                      <div className="flex-1 overflow-y-auto space-y-4 mb-4 pb-2 pr-2" style={{ maxHeight: isMaximized ? 'none' : '400px' }}>
+                      <div className={`flex-1 overflow-y-auto space-y-4 mb-4 pb-2 pr-2 ${isMaximized ? '' : 'max-h-[400px]'}`}>
                         {chatHistory.map((msg, index) => (
                           <div
                             key={index}

@@ -244,16 +244,28 @@ const ProjectFlowchart = ({ moduleId }: { moduleId: string | null }) => {
             <button
               onClick={addNode}
               className={`${headerBg} ${btnHover} backdrop-blur-md px-3 py-2 rounded-lg text-sm font-medium ${headerText} shadow-md border ${headerBorder} transition-colors flex items-center gap-2`}
+              title="Add new node to graph"
             >
               <Plus size={16} /> Add Box
             </button>
-            <button className={`${headerBg} ${btnHover} backdrop-blur-md p-2 rounded-lg ${iconColor} shadow-md border ${headerBorder} transition-colors`}>
+            <button 
+              className={`${headerBg} ${btnHover} backdrop-blur-md p-2 rounded-lg ${iconColor} shadow-md border ${headerBorder} transition-colors`}
+              title="Download graph"
+            >
               <Download size={18} />
             </button>
-            <button onClick={toggleTheme} className={`${headerBg} ${btnHover} backdrop-blur-md p-2 rounded-lg ${iconColor} shadow-md border ${headerBorder} transition-colors`} aria-label="Toggle Theme">
+            <button 
+              onClick={toggleTheme} 
+              className={`${headerBg} ${btnHover} backdrop-blur-md p-2 rounded-lg ${iconColor} shadow-md border ${headerBorder} transition-colors`} 
+              aria-label="Toggle Theme"
+              title="Toggle dark/light theme"
+            >
               {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            <button className={`${headerBg} ${btnHover} backdrop-blur-md p-2 rounded-lg ${iconColor} shadow-md border ${headerBorder} transition-colors`}>
+            <button 
+              className={`${headerBg} ${btnHover} backdrop-blur-md p-2 rounded-lg ${iconColor} shadow-md border ${headerBorder} transition-colors`}
+              title="Settings"
+            >
               <Settings size={18} />
             </button>
             <button
@@ -314,6 +326,7 @@ const ProjectFlowchart = ({ moduleId }: { moduleId: string | null }) => {
               <button
                 onClick={() => setChatInput("")}
                 className="absolute right-2 p-1.5 rounded-lg text-primary hover:bg-primary/20 transition-colors"
+                title="Send message"
               >
                 <Send size={16} className={chatInput.trim() ? "opacity-100" : "opacity-50"} />
               </button>
