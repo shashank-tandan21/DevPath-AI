@@ -1,145 +1,51 @@
 [
   {
-    "id": "44517758-fd42-4d3d-857e-4707d62601d1",
-    "title": "Introduction to Python Data Analysis",
-    "description": "Learn the basics of Python data analysis in this beginner-friendly tutorial. Explore key concepts and tools to kickstart your journey into data science.",
-    "category": "Python Data Analysis",
+    "id": "93b6f9fe-357e-4a81-9d33-0f7a88984687",
+    "title": "Learn Java in 14 Minutes",
+    "description": "A quick and comprehensive introduction to Java programming, covering essential concepts and practical applications in just 14 minutes.",
+    "category": "Programming",
     "difficulty": "Beginner",
     "estimated_time_minutes": 30,
     "content": {
-      "raw_markdown": "# Introduction to Python Data Analysis\n\n*Learn the basics of Python data analysis in this beginner-friendly tutorial. Explore key concepts and tools to kickstart your journey into data science.*\n\n## Learning Objectives\n- Understand the basics of Python data analysis\n- Learn how to manipulate and visualize data using Pandas and Matplotlib\n\n## Key Concepts\n**Data manipulation with Pandas • Data visualization with Matplotlib**\n\n## Detailed Explanation\nIn this tutorial, we will cover the fundamentals of Python data analysis, including data manipulation, visualization, and basic statistical analysis. You will learn how to use popular libraries such as Pandas and Matplotlib to work with data efficiently. By the end, you will have a solid foundation to start exploring and analyzing datasets on your own.",
+      "raw_markdown": "# Learn Java in 14 Minutes\n\n## Introduction\nWelcome to this quick tutorial on Java programming! In just 14 minutes, we will cover the essential concepts you need to get started with Java. Whether you're a complete beginner or someone looking to refresh your knowledge, this guide will provide you with a solid foundation.\n\n## Prerequisites & Setup\nBefore diving into Java, ensure you have the following:\n- A computer with Java Development Kit (JDK) installed.\n- An Integrated Development Environment (IDE) like Eclipse or IntelliJ IDEA.\n\n### Installing Eclipse\n1. Download Eclipse from the official website.\n2. Follow the installation instructions for your operating system (Windows or Mac).\n3. Launch Eclipse and create a new Java project.\n\n## Core Fundamentals\n### What is Java?\nJava is a high-level, object-oriented programming language that is widely used for building applications. It is known for its portability, performance, and security features.\n\n### Writing Your First Java Program\n1. Open your IDE and create a new Java project.\n2. Right-click on the `src` folder, select `New`, then `Class`.\n3. Name your class (e.g., `LearnJava`) and check the box for `public static void main`.\n4. Click `Finish` to create your Java file.\n\n### Basic Syntax\nJava syntax consists of keywords, symbols, and statements. Here’s a simple example:\n```java\npublic class LearnJava {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n```\nThis program prints \"Hello, World!\" to the console.\n\n## Key Concepts\n### Variables and Data Types\nIn Java, you can store data using variables. Here are some common data types:\n- `int`: Integer values (e.g., `int a = 5;`)\n- `char`: Single characters (e.g., `char b = 'A';`)\n- `double`: Decimal numbers (e.g., `double c = 5.99;`)\n- `String`: A sequence of characters (e.g., `String name = \"Susan\";`)\n\n### Methods\nMethods are blocks of code that perform a specific task. Here’s how to define a method:\n```java\npublic void addExclamation(String s) {\n    System.out.println(s + \"!\");\n}\n```\nTo call this method, you would use:\n```java\naddExclamation(\"Hello\");\n```\n\n### Control Flow\nControl flow statements allow you to dictate the flow of your program:\n- **If Statements**: Execute code based on a condition.\n```java\nif (a == 5) {\n    System.out.println(\"a is 5\");\n}\n```\n- **For Loops**: Repeat code a specific number of times.\n```java\nfor (int i = 0; i < 5; i++) {\n    System.out.println(i);\n}\n```\n- **While Loops**: Repeat code while a condition is true.\n```java\nwhile (a < 10) {\n    a++;\n}\n```\n\n## Practical Application\n### Creating Objects\nIn Java, you can create objects from classes. For example:\n```java\nAnimal a = new Animal();\n```\nYou can then call methods on this object:\n```java\nString message = a.iAmDog();\nSystem.out.println(message);\n```\n\n### Using Libraries and APIs\nJava allows you to use external libraries and APIs to enhance your applications. To use an API:\n1. Download the API's JAR file.\n2. Add it to your project’s build path.\n3. Import the necessary classes in your Java file.\n\n## Advanced Techniques\n### Exception Handling\nUse try-catch blocks to handle exceptions gracefully:\n```java\ntry {\n    // Code that may throw an exception\n} catch (Exception e) {\n    System.out.println(\"An error occurred: \" + e.getMessage());\n}\n```\n\n### Best Practices\n- Always comment your code for clarity.\n- Use meaningful variable names.\n- Keep your methods short and focused on a single task.\n\n## Common Errors\n- **Syntax Errors**: Missing semicolons or brackets.\n- **Null Pointer Exceptions**: Trying to use an object that hasn’t been initialized.\n\n## Conclusion\nCongratulations! You’ve just learned the basics of Java programming in 14 minutes. Keep practicing and exploring more advanced topics to enhance your skills.\n\n## Next Steps\n- Explore Java documentation for deeper insights.\n- Work on small projects to apply what you’ve learned.\n- Join online communities for support and resources.",
       "learning_objectives": [
-        "Understand the basics of Python data analysis",
-        "Learn how to manipulate and visualize data using Pandas and Matplotlib"
+        "Understand the basic syntax and structure of Java programs.",
+        "Learn how to declare variables and use different data types.",
+        "Create and call methods in Java.",
+        "Implement control flow statements like if-else and loops.",
+        "Understand object-oriented programming concepts."
       ],
       "key_concepts": [
-        "Data manipulation with Pandas",
-        "Data visualization with Matplotlib"
+        "Java Syntax",
+        "Variables and Data Types",
+        "Methods",
+        "Control Flow",
+        "Object-Oriented Programming"
       ],
-      "primary_language": "Python",
-      "starter_code_language": "python",
+      "primary_language": "Java",
+      "starter_code_language": "Java",
       "practice_tasks": [
         {
-          "title": "Data Manipulation with Pandas",
-          "description": "Load a sample dataset using Pandas and display the first few rows.",
+          "title": "Create a Simple Java Program",
+          "description": "Write a Java program that prints your name and age.",
           "requirements": [
-            "Basic knowledge of Python"
+            "Java Development Kit (JDK)",
+            "IDE like Eclipse or IntelliJ"
           ],
-          "starter_code": "import pandas as pd\n\n# Load the dataset\ndata = pd.read_csv('sample_data.csv')\n\n# Display the first 5 rows of the dataset\nprint(data.head())",
+          "starter_code": "public class MyInfo {\n    public static void main(String[] args) {\n        // Your code here\n    }\n}",
           "hints": [
-            "Use the 'read_csv()' function to load the dataset",
-            "Check the Pandas documentation for more information"
+            "Use System.out.println to print to the console."
           ]
         },
         {
-          "title": "Data Visualization with Matplotlib",
-          "description": "Create a simple line plot to visualize a column from the dataset.",
+          "title": "Implement a Method",
+          "description": "Create a method that takes a string and returns it in uppercase.",
           "requirements": [
-            "Understanding of data visualization concepts"
+            "Basic understanding of methods"
           ],
-          "starter_code": "import matplotlib.pyplot as plt\n\n# Plot a line chart\nplt.plot(data['x'], data['y'])\nplt.xlabel('X-axis label')\nplt.ylabel('Y-axis label')\nplt.title('Title of the Plot')\nplt.show()",
+          "starter_code": "public String toUpperCase(String input) {\n    // Your code here\n}",
           "hints": [
-            "Use the 'plot()' function from Matplotlib",
-            "Label your axes and give the plot a title"
-          ]
-        }
-      ],
-      "transcript_text": ""
-    },
-    "quiz": [
-      {
-        "question": "What library is commonly used for data manipulation in Python?",
-        "options": [
-          "A) NumPy",
-          "B) Pandas",
-          "C) Matplotlib",
-          "D) Scikit-learn"
-        ],
-        "correctAnswer": 1,
-        "explanation": "Pandas is a popular library for data manipulation in Python, offering powerful tools for data analysis."
-      }
-    ],
-    "source_video_id": "ukzFI9rgwfU",
-    "source_url": "https://youtu.be/ukzFI9rgwfU",
-    "created_at": "2026-03-08T17:48:11.341Z"
-  },
-  {
-    "id": "e1e63e1f-ba78-44d6-b057-04946d78e5be",
-    "title": "Comprehensive HTML Basics Tutorial",
-    "description": "This tutorial covers the fundamental concepts of HTML (Hypertext Markup Language), the standard language for creating web pages. Whether you're a beginner or looking to refresh your knowledge, this module will guide you through the essentials of HTML.",
-    "difficulty": "Beginner",
-    "estimated_time_minutes": 30,
-    "category": "Web Development",
-    "source_video_id": "vY2xUc4TVmY",
-    "source_url": "https://youtu.be/vY2xUc4TVmY?si=by6kaPEY9JxQHLI9",
-    "created_at": "2026-03-08T16:28:24.416Z",
-    "content": {
-      "raw_markdown": "# Comprehensive HTML Basics Tutorial\n\n*This tutorial covers the fundamental concepts of HTML (Hypertext Markup Language), the standard language for creating web pages. Whether you're a beginner or looking to refresh your knowledge, this module will guide you through the essentials of HTML.*\n\n## Learning Objectives\n- Understand the structure and purpose of HTML\n- Learn about HTML elements and tags\n- Explore how to create headings, paragraphs, lists, and links in HTML\n- Discover the importance of semantic HTML for accessibility and SEO\n\n## Key Concepts\n**HTML structure and elements • Tags and attributes • Semantic HTML • Accessibility and SEO**\n\n## Detailed Explanation\nHTML, or Hypertext Markup Language, is the backbone of web development. It provides the structure for web pages by using a system of tags and elements. An HTML document consists of nested elements that define the content and layout of a webpage. Understanding HTML basics is crucial for anyone interested in building websites. \n\nTo start, let's discuss the basic structure of an HTML document. Every HTML document begins with a `<!DOCTYPE html>` declaration, followed by an opening and closing `<html>` tag. Within the `<html>` tag, you'll find the `<head>` and `<body>` sections. The `<head>` section contains meta-information about the document, such as the title and links to external resources, while the `<body>` section holds the visible content of the webpage. \n\nHTML elements are the building blocks of a webpage. Each element is enclosed in tags, such as `<tagname>` and `</tagname>`. For instance, the `<h1>` tag represents the main heading of a page, while the `<p>` tag is used for paragraphs. Additionally, lists can be created using `<ul>` (unordered list), `<ol>` (ordered list), and `<li>` (list item) tags. Links are created with the `<a>` tag, which includes the `href` attribute for specifying the URL. \n\nSemantic HTML involves using tags that convey the meaning of the content, making the webpage more accessible to users and search engines. For example, using `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` tags helps organize the content in a meaningful way. Semantic HTML improves SEO and ensures that assistive technologies can interpret the content correctly. \n\nIn summary, mastering HTML basics is essential for web development. By understanding the structure of HTML documents, the purpose of elements and tags, and the significance of semantic HTML, you'll be well-equipped to create well-structured and accessible web pages.\n\n## Code Examples\nThis code snippet demonstrates the basic structure of an HTML document, including headings, paragraphs, lists, and links.\n```HTML\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Page Title</title>\n</head>\n<body>\n    <h1>Main Heading</h1>\n    <p>This is a paragraph.</p>\n    <ul>\n        <li>Item 1</li>\n        <li>Item 2</li>\n    </ul>\n    <a href=\"https://www.example.com\">Link Text</a>\n</body>\n</html>\n```\n\n## Best Practices\n- ✅ Always validate your HTML code using tools like the W3C Markup Validation Service.\n- ✅ Use semantic HTML elements to improve accessibility and SEO.\n- ✅ Maintain a consistent and organized structure in your HTML documents.\n\n## Common Pitfalls\n- ❌ Forgetting to close tags properly, which can lead to unexpected layout issues.\n- ❌ Neglecting to use semantic HTML, resulting in poor accessibility and SEO performance.\n- ❌ Overusing non-semantic tags like <div> for structuring content, instead of using appropriate semantic tags.\n\n## Real World Applications\n- 🌍 Creating personal websites or portfolios\n- 🌍 Developing e-commerce platforms\n- 🌍 Building informational websites for businesses",
-      "primary_language": "HTML",
-      "starter_code_language": "HTML",
-      "learning_objectives": [
-        "Understand the structure and purpose of HTML",
-        "Learn about HTML elements and tags",
-        "Explore how to create headings, paragraphs, lists, and links in HTML",
-        "Discover the importance of semantic HTML for accessibility and SEO"
-      ],
-      "key_concepts": [
-        "HTML structure and elements",
-        "Tags and attributes",
-        "Semantic HTML",
-        "Accessibility and SEO"
-      ],
-      "detailed_content": "HTML, or Hypertext Markup Language, is the backbone of web development. It provides the structure for web pages by using a system of tags and elements. An HTML document consists of nested elements that define the content and layout of a webpage. Understanding HTML basics is crucial for anyone interested in building websites. \n\nTo start, let's discuss the basic structure of an HTML document. Every HTML document begins with a `<!DOCTYPE html>` declaration, followed by an opening and closing `<html>` tag. Within the `<html>` tag, you'll find the `<head>` and `<body>` sections. The `<head>` section contains meta-information about the document, such as the title and links to external resources, while the `<body>` section holds the visible content of the webpage. \n\nHTML elements are the building blocks of a webpage. Each element is enclosed in tags, such as `<tagname>` and `</tagname>`. For instance, the `<h1>` tag represents the main heading of a page, while the `<p>` tag is used for paragraphs. Additionally, lists can be created using `<ul>` (unordered list), `<ol>` (ordered list), and `<li>` (list item) tags. Links are created with the `<a>` tag, which includes the `href` attribute for specifying the URL. \n\nSemantic HTML involves using tags that convey the meaning of the content, making the webpage more accessible to users and search engines. For example, using `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` tags helps organize the content in a meaningful way. Semantic HTML improves SEO and ensures that assistive technologies can interpret the content correctly. \n\nIn summary, mastering HTML basics is essential for web development. By understanding the structure of HTML documents, the purpose of elements and tags, and the significance of semantic HTML, you'll be well-equipped to create well-structured and accessible web pages.",
-      "code_examples": [
-        {
-          "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Page Title</title>\n</head>\n<body>\n    <h1>Main Heading</h1>\n    <p>This is a paragraph.</p>\n    <ul>\n        <li>Item 1</li>\n        <li>Item 2</li>\n    </ul>\n    <a href=\"https://www.example.com\">Link Text</a>\n</body>\n</html>",
-          "explanation": "This code snippet demonstrates the basic structure of an HTML document, including headings, paragraphs, lists, and links.",
-          "language": "HTML"
-        }
-      ],
-      "practice_tasks": [
-        {
-          "title": "Objective 1",
-          "description": "Implement the concept: Understand the structure and purpose of HTML",
-          "requirements": [
-            "Understand the structure and purpose of HTML"
-          ],
-          "starter_code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>My First Web Page</title>\n</head>\n<body>\n    <h1>Welcome to My Website</h1>\n    <p>This is a sample paragraph.</p>\n</body>\n</html>",
-          "hints": [
-            "Try breaking the problem down."
-          ]
-        },
-        {
-          "title": "Objective 2",
-          "description": "Implement the concept: Learn about HTML elements and tags",
-          "requirements": [
-            "Learn about HTML elements and tags"
-          ],
-          "starter_code": "// Continue implementation here\n",
-          "hints": [
-            "Try breaking the problem down."
-          ]
-        },
-        {
-          "title": "Objective 3",
-          "description": "Implement the concept: Explore how to create headings, paragraphs, lists, and links in HTML",
-          "requirements": [
-            "Explore how to create headings, paragraphs, lists, and links in HTML"
-          ],
-          "starter_code": "// Continue implementation here\n",
-          "hints": [
-            "Try breaking the problem down."
-          ]
-        },
-        {
-          "title": "Objective 4",
-          "description": "Implement the concept: Discover the importance of semantic HTML for accessibility and SEO",
-          "requirements": [
-            "Discover the importance of semantic HTML for accessibility and SEO"
-          ],
-          "starter_code": "// Continue implementation here\n",
-          "hints": [
-            "Try breaking the problem down."
+            "Use the String method toUpperCase()"
           ]
         }
       ],
@@ -147,33 +53,129 @@
         "nodes": [
           {
             "id": "1",
-            "label": "Comprehensive HTML Basics Tutorial",
-            "type": "Start"
+            "label": "Start: Java Overview",
+            "type": "Start",
+            "position": {
+              "x": 300,
+              "y": 50
+            }
           },
           {
             "id": "2",
-            "label": "HTML Structure and Elements",
-            "type": "Process"
+            "label": "Prerequisites & Setup",
+            "type": "Process",
+            "position": {
+              "x": 150,
+              "y": 150
+            }
           },
           {
             "id": "3",
-            "label": "Tags and Attributes",
-            "type": "Process"
+            "label": "Core Fundamentals",
+            "type": "Process",
+            "position": {
+              "x": 450,
+              "y": 150
+            }
           },
           {
             "id": "4",
-            "label": "Semantic HTML",
-            "type": "Process"
+            "label": "Java Syntax",
+            "type": "Process",
+            "position": {
+              "x": 100,
+              "y": 250
+            }
           },
           {
             "id": "5",
-            "label": "Accessibility and SEO",
-            "type": "Process"
+            "label": "Variables and Data Types",
+            "type": "Process",
+            "position": {
+              "x": 300,
+              "y": 250
+            }
           },
           {
             "id": "6",
-            "label": "End of Tutorial",
-            "type": "End"
+            "label": "Methods",
+            "type": "Process",
+            "position": {
+              "x": 500,
+              "y": 250
+            }
+          },
+          {
+            "id": "7",
+            "label": "Control Flow",
+            "type": "Process",
+            "position": {
+              "x": 200,
+              "y": 350
+            }
+          },
+          {
+            "id": "8",
+            "label": "Creating Objects",
+            "type": "Process",
+            "position": {
+              "x": 400,
+              "y": 350
+            }
+          },
+          {
+            "id": "9",
+            "label": "Using Libraries and APIs",
+            "type": "Process",
+            "position": {
+              "x": 600,
+              "y": 350
+            }
+          },
+          {
+            "id": "10",
+            "label": "Exception Handling",
+            "type": "Process",
+            "position": {
+              "x": 300,
+              "y": 450
+            }
+          },
+          {
+            "id": "11",
+            "label": "Best Practices",
+            "type": "Display",
+            "position": {
+              "x": 150,
+              "y": 550
+            }
+          },
+          {
+            "id": "12",
+            "label": "Common Errors",
+            "type": "Error",
+            "position": {
+              "x": 450,
+              "y": 550
+            }
+          },
+          {
+            "id": "13",
+            "label": "Practical Application",
+            "type": "Display",
+            "position": {
+              "x": 300,
+              "y": 650
+            }
+          },
+          {
+            "id": "14",
+            "label": "Next Steps & Resources",
+            "type": "End",
+            "position": {
+              "x": 300,
+              "y": 750
+            }
           }
         ],
         "edges": [
@@ -181,157 +183,596 @@
             "id": "e1-2",
             "source": "1",
             "target": "2",
-            "label": "covers"
+            "label": "begin with"
           },
           {
-            "id": "e2-3",
-            "source": "2",
+            "id": "e1-3",
+            "source": "1",
             "target": "3",
-            "label": "includes"
+            "label": "understand"
           },
           {
             "id": "e2-4",
             "source": "2",
             "target": "4",
-            "label": "introduces"
+            "label": "leads to"
           },
           {
-            "id": "e2-5",
-            "source": "2",
+            "id": "e3-5",
+            "source": "3",
             "target": "5",
-            "label": "addresses"
+            "label": "builds into"
           },
           {
             "id": "e3-6",
             "source": "3",
             "target": "6",
-            "label": "concludes"
+            "label": "expands to"
           },
           {
-            "id": "e4-6",
-            "source": "4",
-            "target": "6",
-            "label": "concludes"
+            "id": "e3-7",
+            "source": "3",
+            "target": "7",
+            "label": "includes"
           },
           {
-            "id": "e5-6",
-            "source": "5",
-            "target": "6",
-            "label": "concludes"
+            "id": "e3-8",
+            "source": "3",
+            "target": "8",
+            "label": "introduces"
+          },
+          {
+            "id": "e3-9",
+            "source": "3",
+            "target": "9",
+            "label": "utilizes"
+          },
+          {
+            "id": "e3-10",
+            "source": "3",
+            "target": "10",
+            "label": "covers"
+          },
+          {
+            "id": "e3-11",
+            "source": "3",
+            "target": "11",
+            "label": "highlights"
+          },
+          {
+            "id": "e3-12",
+            "source": "3",
+            "target": "12",
+            "label": "warns about"
+          },
+          {
+            "id": "e3-13",
+            "source": "3",
+            "target": "13",
+            "label": "applies to"
+          },
+          {
+            "id": "e13-14",
+            "source": "13",
+            "target": "14",
+            "label": "leads to"
           }
         ]
-      }
+      },
+      "quiz": {
+        "title": "Java Basics Quiz",
+        "difficulty": "intermediate",
+        "timeLimit": 300,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the correct way to declare an integer variable in Java?",
+            "options": [
+              "int a = 5;",
+              "integer a = 5;",
+              "a int = 5;",
+              "5 = int a;"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The correct syntax for declaring an integer variable is 'int a = 5;'."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which of the following is a valid method declaration in Java?",
+            "options": [
+              "public void myMethod() {}",
+              "void myMethod public() {}",
+              "myMethod() public void {}",
+              "public myMethod() void {}"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The correct syntax for a method declaration is 'public void myMethod() {}'."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What keyword is used to handle exceptions in Java?",
+            "options": [
+              "catch",
+              "try",
+              "throw",
+              "exception"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'try' keyword is used to start a block of code that will be tested for exceptions."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is the output of the following code: System.out.println(\"Hello\".toUpperCase());?",
+            "options": [
+              "HELLO",
+              "Hello",
+              "hello",
+              "Error"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The toUpperCase() method converts the string to uppercase, so the output is 'HELLO'."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which of the following is NOT a primitive data type in Java?",
+            "options": [
+              "int",
+              "String",
+              "char",
+              "double"
+            ],
+            "correctAnswer": 1,
+            "explanation": "String is a non-primitive data type in Java, while int, char, and double are primitive types."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "How do you create a new object of a class named 'Animal'?",
+            "options": [
+              "Animal a = new Animal();",
+              "Animal a = Animal();",
+              "new Animal a = Animal();",
+              "Animal a = new Animal;"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The correct way to create a new object is 'Animal a = new Animal();'."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What does the 'public' keyword signify in Java?",
+            "options": [
+              "The method can be accessed from anywhere.",
+              "The method can only be accessed within the same class.",
+              "The method is private.",
+              "The method is static."
+            ],
+            "correctAnswer": 0,
+            "explanation": "The 'public' keyword means that the method can be accessed from any other class."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What is the purpose of the 'return' statement in a method?",
+            "options": [
+              "To exit the method.",
+              "To send a value back to the caller.",
+              "To print a value.",
+              "To declare a variable."
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'return' statement is used to send a value back to the method caller."
+          }
+        ]
+      },
+      "transcript_text": "If you're struggling in Java, don't worry, because I got you. Just take a nice deep breath, sit back, and I'm going to show you everything you need to know in Java. This video is made so you can just watch it on your phone or follow along if you want. I've been programming in Java for over eight years now. I graduated with a computer science degree, and maybe like you, I had a lot of problems learning how to program at all. I had a breakdown in college when I thought I couldn't pass a few of the projects, so it was really hard for me, but I don't want to make it hard for you. I want to try to help you out wherever you are in your life with programming, and hopefully you find this video helpful. This is everything you need to know about Java in 13 minutes. Hey, it's Alex back again helping you learn Java. On this channel, if you're new here, I make a Java tutorial just like this one every single week. So if you're new here, then consider subscribing. Computers only understand zeros and ones, which makes it kind of difficult for a human. So to solve this, what we did is we made programming languages, which are just a bunch of keywords and symbols that help us program a computer. The one we're learning today is obviously Java, and here is everything you need to know about Java to start getting started. What you see on the screen now is a programming environment. This is where you write code. You can write code in Notepad or on a piece of paper, but none of those ways has a way to compile your code, which means turn it into zeros and ones. There are a bunch of tutorials on how to install Eclipse. This is the Program Eclipse, or IntelliJ is a good one. I made a video of installing Eclipse on Mac and Windows. It's on the screen now if you want to check that out. We'll just set up a file to start learning Java. So I'm just going to go to File, New, Java Project. Type in the project name like Java Tutorial Epicness. Hit Finish. Next, expand that up, right-click on the source folder, and go to New Class, and this is just our Java file. We'll name our Java file like Learn Java. Hit this first check mark, public static void main, and then hit Finish. We get some code-looking stuff pop up on the screen. Like I said, a programming language is just a bunch of keywords and symbols, and it looks like this Java file already has some keywords and symbols in here for us. A super useful thing we can do in Java is store data. We can store, say, a number variable in Java by doing this, int a equals, say, 5. This takes the value of 5 and stores it into a. You'll notice this keyword int, that stands for integer, and there are a bunch of other ones. I'm just going to list a few. So here's a few more. There's one called char, long, and double. Char stands for character, so this is how you would store a character variable. You would just put your character inside of single quotes, and that would be stored into b. We've got a few others, like long, double, and there are a bunch more. These are called primitive types, since they turn purple. Like how primates are before humans, the word primary means number one. Primitive just means it was here before. It's built into Java, which is pretty sweet. Let's go on to non-primitive types of storing data, because storing data is super cool. If we wanted to change our username, say on Instagram, it's got to store it somehow, right? So to store a name, like a bunch of character variables, that would be called string, with a capital S there. We'll name it string name, and set that equal to Susan, and then put a semicolon at the end. Most statements will end in a semicolon, by the way. These don't, for their own reasons. But if it doesn't have some sort of parenthesis at the end, put a semicolon there. All these symbols help Java parse it, which just means go through and make sense of it all. So that's why these weird little semicolons exist. So now the name Susan is stored into name. But notice how this isn't turning purple. It's not a primitive type. If it's not turning purple, that probably means it's an object. And you can do so many things with objects. It's crazy. To do crazy things with your object, we can just type the name of the string. And in this case, it's name. So we'll just type name. You'll see red underlines pop up. Don't worry about it. It's just trying to correct you before you make a mistake. I think it's really stupid, because we're not done yet. But after you have the name of your variable, hit a period. And this period is maybe one of the most important symbols in Java, because it tells you everything that that variable can do for you. All that wonderful code built into Java, you have it accessed through this period. The programmer you're writing Java in will most likely have like a little box here, and you can scroll through it. And this is everything you can do to that variable. So one I like to pick right now would be like to uppercase. So I can just double click on it, or you could type it out. And then semicolon, since it's not opening a bracket. Well, how do we see this working? There's this great piece of code to print out. So you can see things. It's called system.out.println, and then some parentheses. We're pretty much just taking this and sticking it inside of the parentheses of this code. This just puts it on the screen for us. So I'm just going to control S or command S to save it, and I'm going to run it. And then in your console window, it might be called console, it might be called something else. But in a window, you should see your name to uppercase. If you want to see something else, we can just delete this, do the dot again to bring up what it can do. And there's one called to lowercase. Save it again, run it again. And now it's all to lowercase. This to lowercase has some parentheses here. And this putting text to the console window code has some parentheses here too. And anything that has parentheses like this is 99% of the time going to be a method. And methods are amazing. They're the bomb, because they just do things for you, like what we did now. So let's make a method that puts an exclamation mark, say, at the end of whatever string you want. To start a method, just write some keywords. We're going to write the keywords public, static, void. Don't worry too much about this right now. They're just keywords. And every keyword has its own purpose. We'll name it like addXGlamationPoints, parentheses, say, string S in here, and then some curly braces to finish it off. I'm just going to delete these right now, because it might look a little confusing. All this method's going to do is add an exclamation point to the end. So we can just print out to the screen, like we did before. That's super useful. To put two strings together, use a plus sign. So in the parentheses, we'll just type S, which is the name of the string, plus an exclamation mark inside of double quotes, since characters and strings, anything that's not a number or a variable name has to be in quotation marks. Let's end in a semicolon. We'll save it and run it. And nothing happens, because we're not calling the method. So we'll just type the name of the method, and then something like hot dogs. Now we can save it and run it, and we see hot dogs with an exclamation mark. This right here goes here. And whatever's inside of these curly braces gets run. You can also return the results as a variable. So we can say return, which is another keyword, S plus the exclamation mark. You get a red underline, because this keyword, void, is actually the type of what you want to bring back. So we just want to do a string, and now we can say a string exclaim is equal to what's returned from add exclamation point. It's stored in here, but let's print it out, and it does the same thing. Remember I said the dot could bring up a bunch of methods that you could use? Well, you can also call them without a dot, if it's in the same Java file. But now I'm going to show you how to use code from another Java file into your Java file. So I'll just right-click source again, make a new class, we'll call it like animal, and hit finish. I'll make a method just like we did before, say like I am dog, and all it does is return I am a dog. If we want to use the I am dog method, we can just, I'm just going to save it, go in here, delete this code for now. To call I am dog, we can just make an animal object like this, animal a equals new animal. Any time you're making an object, it's going to have this format, and there are a million types of objects out there you can use. But now we can just say a dot, and it brings up what that object can do, and look, I am dog is here. We can just click it, and then store that into a string, dog, and then print out dog. Save it, and run it, and now you see that I am dog message being returned to the variable dog. So a class is just a Java file that helps us make objects. Examples of commonly used objects are ArrayList, has the same format as before, but you've got to put these little angle brackets, but a lot of objects will not come in your code. You have to bring them in. So usually what you'll do is hover over it, and you'll see an import. Click the import suggestion, and that will generate this import keyword, followed by like a path to the ArrayList code. This just means bring the ArrayList into our program so we can use it. In ArrayList you can do things like add, you can add a bunch of items, like this is how they store movies, or store a list of users, you can replace, set, and all sorts of things. So objects and methods are super powerful. Each object has its own methods, and that's why Java is referred to as OOP, which is Object Oriented Programming. Each class represents an object which has its own methods, like this one says I am dog, and you can add as many as you want. Now you might be asking, how do I make a method that does something actually cool? Well we can start another one. We'll say void since we don't want to return anything. You can do logic in Java. One keyword is if. This is called an if statement. You would have a condition in here, say like true, and then it would run the code inside of here. This is useful if you have something like a is equal to five, if a two equals signs, if a is equal to zero, then run this code. You can attack on another one, otherwise if a is equal to one, then we want to run this code. Otherwise, if it's something else completely, then run this code. If-else statements are super useful. You can repeat code by doing a for loop, and a for loop format has the keyword for, some parentheses, and then a format that kind of looks like this. In simple terms, this will repeat the code inside of here five times. You can change it, changing this number, eight, it'll run this code eight times. You can put a for loop inside of a for loop, which makes it really interesting. Just got to change this variable. Now whatever's in here will be run 64 times, because it loops eight times, and then another eight times inside. You can repeat code until a certain condition is met by typing the keyword while, parentheses, curly braces, and say like while a is equal to five, you can print out hi, it's actually say while a is less than 50, print hi, and then increment a by one each time. That's what plus plus means. Now let's just call doStuff, so we can see what's going on. Go into the main method, whatever's in the main method will get run when you click run, so we'll just make our animal again, say a, and then a period to bring out what we can do, and now we can see our doStuff method. If we run it, we'll see hi print out a lot, and then it'll stop until it gets to 49, because it'll start at five, go up six, seven, eight, nine, all the way up until 50, and it'll stop. Some other good logic ones are try catch, so the keyword try, and then catch, it'll try to run the code inside of here. If something goes wrong, an exception is thrown. An exception means just something went wrong with your program, and if something went wrong with your program, then the code inside of here will get run. Let's use other people's code and methods inside of ours. We can do that through an API. An API is pretty much just a long list of methods that you can use that were made from someone else, like Google, YouTube, Instagram, Twitter. Most software companies have APIs that you can use and bring inside your program and do cool stuff. To use someone else's API, you pretty much go to their website, download this jar file. You would right click on your project, go to properties, go to Java build path, add external jars, pop in the jar that you just downloaded, say like Twitter API jar, hit apply, do an import statement just like this, but for the name of that jar, and then you could use the code that they wrote in your program. That's pretty much everything you need to know about Java. We went over primitive types, variables, storing data, objects, classes, methods, logic, like if else statements, and also what a lot of the symbols meant. I really hope this helped you get started. I'm very new at this. I've been doing Java tutorials for a while, but trying to do it all at once was a bit of a challenge for me, so I tried my best. Of course, if you want more, I make a Java tutorial every week, and you can subscribe down below if you don't want to miss any. As always, you could be anywhere in the world, but you're here with me, and I really appreciate that so much. I'll catch you in the next video."
     },
-    "quiz": {
-      "title": "Module Quiz",
-      "difficulty": "intermediate",
-      "timeLimit": 300,
-      "questions": [
+    "source_video_id": "RRubcjpTkks",
+    "source_url": "https://youtu.be/RRubcjpTkks?si=tosC5oPG8B0bb3ue",
+    "created_at": "2026-03-09T16:45:35.282Z"
+  },
+  {
+    "id": "f8827edf-cb6b-44b2-bd42-d152bf2b9067",
+    "title": "Machine Learning Explained in 100 Seconds",
+    "description": "This module provides a concise overview of machine learning, explaining its fundamental concepts, processes, and applications in a clear and engaging manner.",
+    "category": "Machine Learning",
+    "difficulty": "Beginner",
+    "estimated_time_minutes": 30,
+    "content": {
+      "raw_markdown": "# Machine Learning Overview\n\nMachine Learning (ML) is a subset of artificial intelligence that enables computers to learn from data and improve their performance over time without being explicitly programmed. This module will cover the essential concepts and processes involved in machine learning, including data preparation, model training, and evaluation.\n\n## Key Topics Covered:\n- Definition of Machine Learning\n- Historical Context\n- Data Acquisition and Cleaning\n- Feature Engineering\n- Training and Testing Data\n- Algorithms in Machine Learning\n- Error Functions\n- Programming Languages and Frameworks\n- Real-World Applications\n\nBy the end of this module, you will have a foundational understanding of machine learning and its practical applications.",
+      "learning_objectives": [
+        "Understand the basic definition and history of machine learning.",
+        "Learn the importance of data quality and feature engineering.",
+        "Differentiate between training and testing datasets.",
+        "Identify various algorithms used in machine learning.",
+        "Recognize the significance of error functions in model evaluation."
+      ],
+      "key_concepts": [
+        "Machine Learning Definition",
+        "Data Preparation",
+        "Feature Engineering",
+        "Training vs Testing Data",
+        "Algorithms and Error Functions"
+      ],
+      "primary_language": "Python",
+      "starter_code_language": "Python",
+      "practice_tasks": [
         {
-          "id": "q1",
-          "type": "multiple_choice",
-          "question": "What does HTML stand for?",
-          "options": [
-            "Hypertext Markup Language",
-            "Hyperlink and Text Markup Language",
-            "Hypertext Multi Language",
-            "Hypertext Marking Language"
+          "title": "Data Cleaning Task",
+          "description": "Clean a sample dataset by removing null values and outliers.",
+          "requirements": [
+            "Pandas library",
+            "Sample dataset"
           ],
-          "correctAnswer": 0,
-          "explanation": "HTML stands for Hypertext Markup Language, which is the standard language for creating web pages."
+          "starter_code": "import pandas as pd\n\ndf = pd.read_csv('sample_data.csv')\ndf.dropna(inplace=True)  # Remove null values",
+          "hints": [
+            "Use df.describe() to identify outliers."
+          ]
         },
         {
-          "id": "q2",
-          "type": "multiple_choice",
-          "question": "Which tag is used to create a main heading in HTML?",
-          "options": [
-            "<h1>",
-            "<heading>",
-            "<main>",
-            "<title>"
+          "title": "Model Training Task",
+          "description": "Train a simple linear regression model using a training dataset.",
+          "requirements": [
+            "Scikit-learn library",
+            "Training dataset"
           ],
-          "correctAnswer": 0,
-          "explanation": "The <h1> tag is used to define the main heading of a webpage."
-        },
-        {
-          "id": "q3",
-          "type": "multiple_choice",
-          "question": "What is the purpose of the <head> section in an HTML document?",
-          "options": [
-            "To display visible content",
-            "To contain meta-information about the document",
-            "To create links",
-            "To define the main heading"
-          ],
-          "correctAnswer": 1,
-          "explanation": "The <head> section contains meta-information about the document, such as the title and links to external resources."
-        },
-        {
-          "id": "q4",
-          "type": "multiple_choice",
-          "question": "Which of the following is an example of semantic HTML?",
-          "options": [
-            "<div>",
-            "<span>",
-            "<header>",
-            "<b>"
-          ],
-          "correctAnswer": 2,
-          "explanation": "The <header> tag is an example of semantic HTML as it defines a header for a document or section."
-        },
-        {
-          "id": "q5",
-          "type": "multiple_choice",
-          "question": "What attribute is essential for creating a link with the <a> tag?",
-          "options": [
-            "src",
-            "href",
-            "link",
-            "url"
-          ],
-          "correctAnswer": 1,
-          "explanation": "The href attribute is essential for specifying the URL of the page the link goes to."
-        },
-        {
-          "id": "q6",
-          "type": "multiple_choice",
-          "question": "What is a common pitfall in HTML coding?",
-          "options": [
-            "Using semantic tags",
-            "Closing tags properly",
-            "Neglecting to use semantic HTML",
-            "Validating the code"
-          ],
-          "correctAnswer": 2,
-          "explanation": "Neglecting to use semantic HTML can result in poor accessibility and SEO performance."
-        },
-        {
-          "id": "q7",
-          "type": "multiple_choice",
-          "question": "Which of the following tags is used to create an ordered list?",
-          "options": [
-            "<ul>",
-            "<ol>",
-            "<li>",
-            "<list>"
-          ],
-          "correctAnswer": 1,
-          "explanation": "The <ol> tag is used to create an ordered list in HTML."
-        },
-        {
-          "id": "q8",
-          "type": "multiple_choice",
-          "question": "What is the main benefit of using semantic HTML?",
-          "options": [
-            "Improved aesthetics",
-            "Better code validation",
-            "Enhanced accessibility and SEO",
-            "Faster page load times"
-          ],
-          "correctAnswer": 2,
-          "explanation": "Using semantic HTML improves accessibility for users and helps search engines understand the content better, enhancing SEO."
+          "starter_code": "from sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)",
+          "hints": [
+            "Ensure your features and target variable are correctly defined."
+          ]
         }
-      ]
-    }
+      ],
+      "concept_graph": {
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Start: Machine Learning Overview",
+            "type": "Start",
+            "position": {
+              "x": 300,
+              "y": 50
+            }
+          },
+          {
+            "id": "2",
+            "label": "Prerequisites & Setup",
+            "type": "Process",
+            "position": {
+              "x": 150,
+              "y": 150
+            }
+          },
+          {
+            "id": "3",
+            "label": "Core Fundamentals",
+            "type": "Process",
+            "position": {
+              "x": 450,
+              "y": 150
+            }
+          },
+          {
+            "id": "4",
+            "label": "Definition of Machine Learning",
+            "type": "Process",
+            "position": {
+              "x": 100,
+              "y": 250
+            }
+          },
+          {
+            "id": "5",
+            "label": "Historical Context",
+            "type": "Process",
+            "position": {
+              "x": 300,
+              "y": 250
+            }
+          },
+          {
+            "id": "6",
+            "label": "Importance of Data Quality",
+            "type": "Process",
+            "position": {
+              "x": 500,
+              "y": 250
+            }
+          },
+          {
+            "id": "7",
+            "label": "Feature Engineering",
+            "type": "Process",
+            "position": {
+              "x": 200,
+              "y": 350
+            }
+          },
+          {
+            "id": "8",
+            "label": "Training vs Testing Data",
+            "type": "Process",
+            "position": {
+              "x": 400,
+              "y": 350
+            }
+          },
+          {
+            "id": "9",
+            "label": "Choosing an Algorithm",
+            "type": "Process",
+            "position": {
+              "x": 300,
+              "y": 450
+            }
+          },
+          {
+            "id": "10",
+            "label": "Error Functions",
+            "type": "Process",
+            "position": {
+              "x": 150,
+              "y": 550
+            }
+          },
+          {
+            "id": "11",
+            "label": "Programming Languages",
+            "type": "Process",
+            "position": {
+              "x": 450,
+              "y": 550
+            }
+          },
+          {
+            "id": "12",
+            "label": "Real-World Applications",
+            "type": "Display",
+            "position": {
+              "x": 300,
+              "y": 650
+            }
+          },
+          {
+            "id": "13",
+            "label": "Practical Application",
+            "type": "Display",
+            "position": {
+              "x": 200,
+              "y": 750
+            }
+          },
+          {
+            "id": "14",
+            "label": "Common Pitfalls",
+            "type": "Error",
+            "position": {
+              "x": 300,
+              "y": 850
+            }
+          },
+          {
+            "id": "15",
+            "label": "Next Steps & Resources",
+            "type": "End",
+            "position": {
+              "x": 300,
+              "y": 950
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e1-2",
+            "source": "1",
+            "target": "2",
+            "label": "begin with"
+          },
+          {
+            "id": "e1-3",
+            "source": "1",
+            "target": "3",
+            "label": "understand"
+          },
+          {
+            "id": "e2-4",
+            "source": "2",
+            "target": "4",
+            "label": "leads to"
+          },
+          {
+            "id": "e2-5",
+            "source": "2",
+            "target": "5",
+            "label": "requires"
+          },
+          {
+            "id": "e3-6",
+            "source": "3",
+            "target": "6",
+            "label": "builds into"
+          },
+          {
+            "id": "e4-7",
+            "source": "4",
+            "target": "7",
+            "label": "applies to"
+          },
+          {
+            "id": "e5-8",
+            "source": "5",
+            "target": "8",
+            "label": "expands to"
+          },
+          {
+            "id": "e6-9",
+            "source": "6",
+            "target": "9",
+            "label": "influences"
+          },
+          {
+            "id": "e7-10",
+            "source": "7",
+            "target": "10",
+            "label": "is essential for"
+          },
+          {
+            "id": "e8-11",
+            "source": "8",
+            "target": "11",
+            "label": "requires"
+          },
+          {
+            "id": "e9-12",
+            "source": "9",
+            "target": "12",
+            "label": "applies to"
+          },
+          {
+            "id": "e10-14",
+            "source": "10",
+            "target": "14",
+            "label": "avoids"
+          },
+          {
+            "id": "e11-14",
+            "source": "11",
+            "target": "14",
+            "label": "highlights"
+          },
+          {
+            "id": "e12-15",
+            "source": "12",
+            "target": "15",
+            "label": "leads to"
+          },
+          {
+            "id": "e13-15",
+            "source": "13",
+            "target": "15",
+            "label": "concludes with"
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Module Quiz",
+        "difficulty": "intermediate",
+        "timeLimit": 300,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the primary goal of machine learning?",
+            "options": [
+              "To explicitly program computers to perform tasks",
+              "To enable computers to learn from data",
+              "To replace human intelligence",
+              "To create complex algorithms"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The primary goal of machine learning is to enable computers to learn from data."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What does 'garbage in, garbage out' refer to?",
+            "options": [
+              "The importance of data quality",
+              "The complexity of algorithms",
+              "The speed of processing",
+              "The need for programming"
+            ],
+            "correctAnswer": 0,
+            "explanation": "This phrase emphasizes that poor quality data will lead to poor quality outcomes."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which of the following is NOT a step in the machine learning process?",
+            "options": [
+              "Data cleaning",
+              "Feature engineering",
+              "Model deployment",
+              "Data visualization"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Data visualization is not a direct step in the machine learning process."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is feature engineering?",
+            "options": [
+              "The process of cleaning data",
+              "The process of transforming raw data into features",
+              "The process of selecting an algorithm",
+              "The process of deploying a model"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Feature engineering involves transforming raw data into features that better represent the underlying problem."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which programming language is most commonly used in data science?",
+            "options": [
+              "Java",
+              "Python",
+              "C++",
+              "Ruby"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Python is the most popular programming language among data scientists due to its simplicity and extensive libraries."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "What is the purpose of an error function in machine learning?",
+            "options": [
+              "To measure the performance of a model",
+              "To clean the data",
+              "To select features",
+              "To deploy the model"
+            ],
+            "correctAnswer": 0,
+            "explanation": "An error function measures how well a model's predictions match the actual outcomes."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is a common application of machine learning?",
+            "options": [
+              "Playing chess",
+              "Predicting stock prices",
+              "Image recognition",
+              "All of the above"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Machine learning is used in various applications, including playing games, predicting prices, and recognizing images."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What does the term 'training set' refer to?",
+            "options": [
+              "Data used to evaluate the model",
+              "Data used to train the model",
+              "Data that is not used in the process",
+              "Data that is cleaned"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The training set is the data used to train the model, while the testing set is used for evaluation."
+          }
+        ]
+      },
+      "transcript_text": "Machine learning. Teach a computer how to perform a task without explicitly programming it to perform said task. Instead, feed data into an algorithm to gradually improve outcomes with experience, similar to how organic life learns. The term was coined in 1959 by Arthur Samuel at IBM, who was developing artificial intelligence that could play checkers. Half a century later, and predictive models are embedded in many of the products we use every day, which perform two fundamental jobs. One is to classify data, like, is there another car on the road, or does this patient have cancer? The other is to make predictions about future outcomes, like, will the stock go up, or which YouTube video do you want to watch next? The first step in the process is to acquire and clean up data. Lots and lots of data. The better the data represents the problem, the better the results. Garbage in, garbage out. The data needs to have some kind of signal to be valuable to the algorithm for making predictions, and data scientists perform a job called feature engineering to transform raw data into features that better represent the underlying problem. The next step is to separate the data into a training set and testing set. The training data is fed into an algorithm to build a model, then the testing data is used to validate the accuracy or error of the model. The next step is to choose an algorithm, which might be a simple statistical model like linear or logistic regression, or a decision tree that assigns different weights to features in the data. Or you might get fancy with a convolutional neural network, which is an algorithm that also assigns weights to features, but also takes the input data and creates additional features automatically. And that's extremely useful for datasets that contain things like images or natural language, where manual feature engineering is virtually impossible. Every one of these algorithms learns to get better by comparing its predictions to an error function. If it's a classification problem, like is this animal a cat or a dog, the error function might be accuracy. If it's a regression problem, like how much will a loaf of bread cost next year, then it might be mean absolute error. Python is the language of choice among data scientists, but R and Julia are also popular options, and there are many supporting frameworks out there to make the process approachable. The end result of the machine learning process is a model, which is just a file that takes some input data in the same shape that it was trained on, then spits out a prediction that tries to minimize the error that it was optimized for. It can then be embedded on an actual device or deployed to the cloud to build a real-world product. This has been Machine Learning in 100 Seconds. Like and subscribe if you want to see more short videos like this, and leave a comment if you want to see more machine learning content on this channel. Thanks for watching, and I will see you in the next one."
+    },
+    "source_video_id": "PeMlggyqz0Y",
+    "source_url": "https://youtu.be/PeMlggyqz0Y?si=QfYzDNWiuDoBV9MA",
+    "created_at": "2026-03-09T16:32:29.131Z"
   }
 ]

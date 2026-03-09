@@ -21,7 +21,7 @@ app.post('/api/auth/google', (req, res) => {
   res.json({ message: "Google auth endpoint hit" });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, 'localhost', () => {
   console.log(`Backend server running on http://localhost:${PORT}`);
   console.log("Memory is fresh. SQLite and JSON storage are DISABLED.");
 });

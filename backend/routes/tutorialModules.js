@@ -18,26 +18,37 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// START FRESH - Clear old data on startup
+// Load data from JSON files on startup
+const loadModules = () => {
+  try {
+    const data = fs.readFileSync(path.join(__dirname, '../data/modules.json'), 'utf8');
+    modules = JSON.parse(data);
+    console.log(`📂 Loaded ${modules.length} modules from modules.json`);
+  } catch (err) {
+    modules = [];
+    console.log('📝 Initialized empty modules list');
+  }
+};
+
+const loadQuizAttempts = () => {
+  try {
+    const data = fs.readFileSync(path.join(__dirname, '../data/quiz_attempts.json'), 'utf8');
+    quizAttempts = JSON.parse(data);
+    console.log(`📂 Loaded ${quizAttempts.length} quiz attempts from quiz_attempts.json`);
+  } catch (err) {
+    quizAttempts = [];
+    console.log('📝 Initialized empty quiz attempts list');
+  }
+};
+
 let modules = [];
 let quizAttempts = [];
 
-// Clear existing data files on startup
-try {
-  fs.writeFileSync(path.join(__dirname, '../data/modules.json'), JSON.stringify([], null, 2));
-  console.log('🧹 Cleared modules.json - Starting fresh');
-} catch (err) {
-  console.log('⚠️  Could not clear modules.json');
-}
+// Initialize data
+loadModules();
+loadQuizAttempts();
 
-try {
-  fs.writeFileSync(path.join(__dirname, '../data/quiz_attempts.json'), JSON.stringify([], null, 2));
-  console.log('🧹 Cleared quiz_attempts.json - Starting fresh');
-} catch (err) {
-  console.log('⚠️  Could not clear quiz_attempts.json');
-}
-
-console.log('✨ Server starting with clean slate - all data will be saved during runtime');
+console.log('✨ Server started - Data persistence ENABLED');
 
 // Helper functions to save data to JSON files during runtime
 const saveModules = () => {
@@ -57,31 +68,6 @@ const saveQuizAttempts = () => {
     console.error('❌ Error saving quiz attempts:', err);
   }
 };
-
-// Cleanup on server shutdown
-process.on('SIGINT', () => {
-  console.log('\n🧹 Server shutting down - clearing all data...');
-  try {
-    fs.writeFileSync(path.join(__dirname, '../data/modules.json'), JSON.stringify([], null, 2));
-    fs.writeFileSync(path.join(__dirname, '../data/quiz_attempts.json'), JSON.stringify([], null, 2));
-    console.log('✅ Data cleared successfully');
-  } catch (err) {
-    console.error('❌ Error clearing data:', err);
-  }
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('\n🧹 Server shutting down - clearing all data...');
-  try {
-    fs.writeFileSync(path.join(__dirname, '../data/modules.json'), JSON.stringify([], null, 2));
-    fs.writeFileSync(path.join(__dirname, '../data/quiz_attempts.json'), JSON.stringify([], null, 2));
-    console.log('✅ Data cleared successfully');
-  } catch (err) {
-    console.error('❌ Error clearing data:', err);
-  }
-  process.exit(0);
-});
 
 const extractVideoId = (url) => {
   if (!url) return false;
@@ -111,10 +97,10 @@ router.get('/:id', (req, res) => {
 router.get('/:id/quiz', (req, res) => {
   const mod = modules.find(m => m.id === req.params.id);
   if (!mod) return res.status(404).json({ error: 'Module not found' });
-  
+
   // Quiz is stored in mod.content.quiz, not mod.quiz
   const quizData = mod.content?.quiz || { questions: [] };
-  
+
   // If quiz is an array (old format), convert to object format
   if (Array.isArray(quizData)) {
     res.json({
@@ -138,7 +124,7 @@ router.get('/:id/quiz', (req, res) => {
 router.post('/:id/quiz/attempt', (req, res) => {
   const { score, totalQuestions, passed } = req.body;
   const moduleId = req.params.id;
-  
+
   const attempt = {
     id: `attempt_${Date.now()}`,
     moduleId,
@@ -147,13 +133,13 @@ router.post('/:id/quiz/attempt', (req, res) => {
     passed,
     timestamp: new Date().toISOString()
   };
-  
+
   quizAttempts.push(attempt);
   console.log(`Quiz attempt saved: ${score}/${totalQuestions} for module ${moduleId}`);
-  
+
   // Save to JSON file
   saveQuizAttempts();
-  
+
   res.json({ success: true, attempt });
 });
 
@@ -161,17 +147,17 @@ router.post('/:id/quiz/attempt', (req, res) => {
 router.get('/:id/graph', (req, res) => {
   const mod = modules.find(m => m.id === req.params.id);
   if (!mod) return res.status(404).json({ error: 'Module not found' });
-  
+
   const graphData = mod.content?.concept_graph;
-  
+
   if (!graphData || !graphData.nodes || graphData.nodes.length === 0) {
-    return res.status(404).json({ 
+    return res.status(404).json({
       error: 'No concept graph available for this module',
       nodes: [],
       edges: []
     });
   }
-  
+
   res.json(graphData);
 });
 
@@ -266,6 +252,13 @@ router.post('/analyze-video', async (req, res) => {
       2. If the Transcript is "[TRANSCRIPT UNAVAILABLE]", build a comprehensive module using purely the exact topics mentioned in the Title and Description.
       3. If the video appears entirely unrelated to technical education or learning and you cannot confidently build a basic module from the Title/Description, you MAY return the generic error JSON (Could Not Analyze Video). But you MUST try your best to build a module from the Title/Description if they contain valid technical or educational concepts.
       4. Always output VALID JSON matching the format below.
+      
+      5. CRITICAL: For "raw_markdown", generate a MASSIVE, DEEP-DIVE summary (at least 1500-2000 words). 
+         - Use detailed headers (H1, H2, H3).
+         - Include every single code snippet mentioned or implied in the video.
+         - provide step-by-step explanations for complex logic.
+         - include 'Pro Tips', 'Best Practices', and 'Common Errors' sections.
+         - Make it feel like a high-quality blog post or textbook chapter.
       
       JSON FORMAT FOR SUCCESSFUL ANALYSIS:
       {
