@@ -24,6 +24,6 @@ app.post('/api/auth/google', (req, res) => {
 const HOST = process.env.RENDER ? '0.0.0.0' : 'localhost';
 
 app.listen(PORT, HOST, () => {
-  console.log(`Backend server running on http://localhost:${PORT}`);
-  console.log("Memory is fresh. SQLite and JSON storage are DISABLED.");
+  console.log(`\n🚀 Backend is running: http://localhost:${PORT}`);
+  console.log("🔒 Access is restricted to Localhost Only (Internal).\n");
 });
