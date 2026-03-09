@@ -1,5 +1,407 @@
 [
   {
+    "id": "e52c2f16-b90c-433d-adf0-ab48e6711d73",
+    "title": "Python in 100 Seconds",
+    "description": "This module provides a rapid overview of Python, one of the most popular programming languages in the world. Learn about its features, syntax, and applications in just 100 seconds.",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "estimated_time_minutes": 30,
+    "content": {
+      "raw_markdown": "# Python in 100 Seconds\n\n## Introduction to Python\nPython is a high-level, interpreted programming language that has gained immense popularity due to its simplicity and versatility. Created by Guido van Rossum and released in 1991, Python is named after the British comedy series Monty Python's Flying Circus. This tutorial will cover the essential features of Python, its syntax, and its applications in various fields.\n\n## Why Learn Python?\nPython is often recommended for beginners due to its readability and straightforward syntax. It is widely used in professional software development, including web applications, data science, and machine learning. The language emphasizes code readability, which is a significant advantage for new programmers.\n\n## Key Features of Python\n- **Interpreted Language**: Python code is executed line by line, which makes debugging easier.\n- **Dynamic Typing**: Variables in Python do not require explicit declaration of their data type.\n- **Strongly Typed**: Once a variable is assigned a value, it cannot change types unexpectedly.\n- **Multi-Paradigm**: Supports procedural, object-oriented, and functional programming styles.\n- **Extensive Libraries**: Python has a rich ecosystem of libraries and frameworks, such as Django for web development and TensorFlow for machine learning.\n\n## Getting Started with Python\nTo start coding in Python, you can create a file with a `.py` extension or use an interactive notebook with a `.ipynb` extension. Here’s a simple example of how to create a variable:\n\n```python\n# Creating a variable\nname = \"John\"\n```\n\n### Basic Syntax\nPython's syntax is designed to be clean and easy to understand. Here are some key points:\n- **Indentation**: Instead of using braces or semicolons, Python uses indentation to define code blocks. For example:\n\n```python\ndef greet():\n    print(\"Hello, World!\")\n```\n\n- **Data Structures**: Python supports various data structures, including lists, tuples, and dictionaries. Here’s how to define them:\n\n```python\n# List\nmy_list = [1, 2, 3]\n\n# Tuple\nmy_tuple = (1, 2, 3)\n\n# Dictionary\nmy_dict = {\"key\": \"value\"}\n```\n\n### Functions and Loops\nFunctions are defined using the `def` keyword, and loops can be created using `for` or `while`. Here’s an example of a function with a loop:\n\n```python\ndef print_numbers(n):\n    for i in range(n):\n        print(i)\n```\n\n### Object-Oriented Programming\nPython supports object-oriented programming, allowing you to create classes and objects. Here’s a simple class definition:\n\n```python\nclass Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def bark(self):\n        print(f\"{self.name} says woof!\")\n```\n\n## Advanced Features\nPython also includes advanced features such as:\n- **Lambda Functions**: Anonymous functions defined with the `lambda` keyword.\n- **List Comprehensions**: A concise way to create lists.\n\n```python\n# List comprehension example\nsquares = [x**2 for x in range(10)]\n```\n\n## Libraries and Frameworks\nPython's extensive libraries make it suitable for various applications:\n- **Web Development**: Django, Flask\n- **Data Science**: Pandas, NumPy\n- **Machine Learning**: TensorFlow, Scikit-learn\n\n## Conclusion\nPython is a powerful and versatile programming language that is easy to learn and widely used in the industry. Whether you are interested in web development, data analysis, or machine learning, Python has the tools and libraries to help you succeed. Start coding today and explore the endless possibilities with Python!\n\n## Pro Tips\n- Always follow the PEP 8 style guide for writing clean and readable code.\n- Use virtual environments to manage dependencies for different projects.\n\n## Best Practices\n- Write unit tests for your code to ensure reliability.\n- Document your code with comments and docstrings.\n\n## Common Errors\n- Forgetting to indent code blocks can lead to `IndentationError`.\n- Using the wrong data type can cause unexpected behavior in your programs.\n\n## Next Steps\n- Explore Python's official documentation for more in-depth learning.\n- Join online communities and forums to connect with other Python developers.",
+      "learning_objectives": [
+        "Understand the basic syntax and structure of Python code.",
+        "Learn how to create and manipulate variables, functions, and data structures.",
+        "Explore Python's object-oriented programming capabilities.",
+        "Familiarize yourself with popular libraries and frameworks in Python."
+      ],
+      "key_concepts": [
+        "Python Syntax",
+        "Data Structures",
+        "Functions and Loops",
+        "Object-Oriented Programming",
+        "Libraries and Frameworks"
+      ],
+      "primary_language": "Python",
+      "starter_code_language": "Python",
+      "practice_tasks": [
+        {
+          "title": "Create a Simple Function",
+          "description": "Write a function that takes a number as input and returns its square.",
+          "requirements": [
+            "Basic understanding of functions"
+          ],
+          "starter_code": "def square(num):\n    # Your code here",
+          "hints": [
+            "Use the return statement to return the result."
+          ]
+        },
+        {
+          "title": "Build a Simple Class",
+          "description": "Create a class representing a Car with attributes for make and model, and a method to display its details.",
+          "requirements": [
+            "Basic understanding of classes"
+          ],
+          "starter_code": "class Car:\n    def __init__(self, make, model):\n        # Your code here\n\n    def display_details(self):\n        # Your code here",
+          "hints": [
+            "Use the __init__ method to initialize attributes."
+          ]
+        }
+      ],
+      "concept_graph": {
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Start: Python Overview",
+            "type": "Start",
+            "position": {
+              "x": 300,
+              "y": 50
+            }
+          },
+          {
+            "id": "2",
+            "label": "Prerequisites & Setup",
+            "type": "Process",
+            "position": {
+              "x": 150,
+              "y": 150
+            }
+          },
+          {
+            "id": "3",
+            "label": "Core Fundamentals",
+            "type": "Process",
+            "position": {
+              "x": 450,
+              "y": 150
+            }
+          },
+          {
+            "id": "4",
+            "label": "Python Syntax",
+            "type": "Process",
+            "position": {
+              "x": 100,
+              "y": 250
+            }
+          },
+          {
+            "id": "5",
+            "label": "Data Structures",
+            "type": "Process",
+            "position": {
+              "x": 300,
+              "y": 250
+            }
+          },
+          {
+            "id": "6",
+            "label": "Functions and Loops",
+            "type": "Process",
+            "position": {
+              "x": 500,
+              "y": 250
+            }
+          },
+          {
+            "id": "7",
+            "label": "Object-Oriented Programming",
+            "type": "Process",
+            "position": {
+              "x": 200,
+              "y": 350
+            }
+          },
+          {
+            "id": "8",
+            "label": "Advanced Features",
+            "type": "Process",
+            "position": {
+              "x": 400,
+              "y": 350
+            }
+          },
+          {
+            "id": "9",
+            "label": "Practical Application",
+            "type": "Display",
+            "position": {
+              "x": 300,
+              "y": 450
+            }
+          },
+          {
+            "id": "10",
+            "label": "Libraries and Frameworks",
+            "type": "Process",
+            "position": {
+              "x": 150,
+              "y": 550
+            }
+          },
+          {
+            "id": "11",
+            "label": "Best Practices",
+            "type": "Display",
+            "position": {
+              "x": 450,
+              "y": 550
+            }
+          },
+          {
+            "id": "12",
+            "label": "Common Pitfalls",
+            "type": "Error",
+            "position": {
+              "x": 300,
+              "y": 650
+            }
+          },
+          {
+            "id": "13",
+            "label": "Testing & Debugging",
+            "type": "Process",
+            "position": {
+              "x": 200,
+              "y": 750
+            }
+          },
+          {
+            "id": "14",
+            "label": "Integration & Deployment",
+            "type": "Process",
+            "position": {
+              "x": 400,
+              "y": 750
+            }
+          },
+          {
+            "id": "15",
+            "label": "Next Steps & Resources",
+            "type": "End",
+            "position": {
+              "x": 300,
+              "y": 850
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e1-2",
+            "source": "1",
+            "target": "2",
+            "label": "begin with"
+          },
+          {
+            "id": "e1-3",
+            "source": "1",
+            "target": "3",
+            "label": "understand"
+          },
+          {
+            "id": "e2-4",
+            "source": "2",
+            "target": "4",
+            "label": "leads to"
+          },
+          {
+            "id": "e3-5",
+            "source": "3",
+            "target": "5",
+            "label": "builds into"
+          },
+          {
+            "id": "e3-6",
+            "source": "3",
+            "target": "6",
+            "label": "expands to"
+          },
+          {
+            "id": "e4-7",
+            "source": "4",
+            "target": "7",
+            "label": "applies to"
+          },
+          {
+            "id": "e5-9",
+            "source": "5",
+            "target": "9",
+            "label": "use for"
+          },
+          {
+            "id": "e6-9",
+            "source": "6",
+            "target": "9",
+            "label": "implement in"
+          },
+          {
+            "id": "e7-8",
+            "source": "7",
+            "target": "8",
+            "label": "includes"
+          },
+          {
+            "id": "e8-10",
+            "source": "8",
+            "target": "10",
+            "label": "utilizes"
+          },
+          {
+            "id": "e9-11",
+            "source": "9",
+            "target": "11",
+            "label": "follows best practices"
+          },
+          {
+            "id": "e10-12",
+            "source": "10",
+            "target": "12",
+            "label": "avoid"
+          },
+          {
+            "id": "e11-13",
+            "source": "11",
+            "target": "13",
+            "label": "validate with"
+          },
+          {
+            "id": "e12-14",
+            "source": "12",
+            "target": "14",
+            "label": "prepare for"
+          },
+          {
+            "id": "e13-15",
+            "source": "13",
+            "target": "15",
+            "label": "complete with"
+          },
+          {
+            "id": "e14-15",
+            "source": "14",
+            "target": "15",
+            "label": "finalize with"
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Python Basics Quiz",
+        "difficulty": "intermediate",
+        "timeLimit": 300,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the correct file extension for Python files?",
+            "options": [
+              ".py",
+              ".python",
+              ".pyt",
+              ".pt"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Python files use the .py extension."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which keyword is used to define a function in Python?",
+            "options": [
+              "function",
+              "def",
+              "func",
+              "define"
+            ],
+            "correctAnswer": 1,
+            "explanation": "The 'def' keyword is used to define a function."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the output of the following code: print(type(5))?",
+            "options": [
+              "<class 'int'>",
+              "<class 'str'>",
+              "<class 'float'>",
+              "<class 'list'>"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The type of the integer 5 is <class 'int'>."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which of the following is a mutable data type in Python?",
+            "options": [
+              "Tuple",
+              "String",
+              "List",
+              "Integer"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Lists are mutable, meaning they can be changed after creation."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "What does the following code do? my_list = [x for x in range(5)]",
+            "options": [
+              "Creates a list of numbers from 0 to 4",
+              "Creates a list of numbers from 1 to 5",
+              "Creates an empty list",
+              "Creates a list of squares of numbers from 0 to 4"
+            ],
+            "correctAnswer": 0,
+            "explanation": "This is a list comprehension that generates a list of numbers from 0 to 4."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which of the following statements is true about Python's indentation?",
+            "options": [
+              "It is optional.",
+              "It is used to define code blocks.",
+              "It can be replaced with braces.",
+              "It must be exactly 8 spaces."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Indentation is used in Python to define the scope of code blocks."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is the purpose of the __init__ method in a class?",
+            "options": [
+              "To initialize the class",
+              "To create an instance of the class",
+              "To define a method",
+              "To destroy the class"
+            ],
+            "correctAnswer": 0,
+            "explanation": "__init__ is the constructor method that initializes the class attributes."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which library is commonly used for data manipulation in Python?",
+            "options": [
+              "NumPy",
+              "Django",
+              "Flask",
+              "TensorFlow"
+            ],
+            "correctAnswer": 0,
+            "explanation": "NumPy is a popular library for numerical and data manipulation."
+          }
+        ]
+      },
+      "transcript_text": "Python, a high-level, interpreted programming language famous for its zen-like code. It's arguably the most popular language in the world because it's easy to learn, yet practical for serious projects. In fact, you're watching this YouTube video in a Python web application right now. It was created by Guido van Rossum and released in 1991, who named it after Monty Python's Flying Circus, which is why you'll sometimes find spam and eggs instead of foo and bar in code samples. It's commonly used to build server-side applications, like web apps with the Django framework, and is the language of choice for big data analysis and machine learning. Many students choose Python to start learning to code because of its emphasis on readability as outlined by the zen of Python. Beautiful is better than ugly, while explicit is better than implicit. Python is very simple, but avoids the temptation to sprinkle in magic that causes ambiguity. Its code is often organized into notebooks, where individual cells can be executed, then documented in the same place. We're currently at version 3 of the language, and you can get started by creating a file that ends in .py or .ipynb to create an interactive notebook. Create a variable by setting a name equal to a value. It's strongly typed, which means values won't change in unexpected ways, but dynamic, so type annotations are not required. The syntax is highly efficient, allowing you to declare multiple variables on a single line and define tuples, lists, and dictionaries with a literal syntax. Semicolons are not required, and if you use them, an experienced Pythonista will say that your code is not Pythonic. Instead of semicolons, Python uses indentation to terminate or determine the scope of a line of code. Define a function with the def keyword, then indent the next line, usually by four spaces, to define the function body. We might then add a for loop to it and indent that by another four spaces. This eliminates the need for curly braces and semicolons found in many other languages. Python is a multi-paradigm language. We can apply functional programming patterns with things like anonymous functions using lambda. It also uses objects as an abstraction for data, allowing you to implement object-oriented patterns with things like classes and inheritance. It also has a huge ecosystem of third-party libraries, such as deep learning frameworks like TensorFlow, and wrappers for many high-performance, low-level packages like Open Computer Vision, which are most often installed with the pip package manager. This has been the Python programming language in 100 seconds. Hit the like button if you want to see more short videos like this. Thanks for watching, and I will see you in the next one."
+    },
+    "source_video_id": "x7X9w_GIm1s",
+    "source_url": "https://youtu.be/x7X9w_GIm1s?si=xlT3sAmxnFNwZ1nr",
+    "created_at": "2026-03-09T17:36:35.939Z"
+  },
+  {
     "id": "93b6f9fe-357e-4a81-9d33-0f7a88984687",
     "title": "Learn Java in 14 Minutes",
     "description": "A quick and comprehensive introduction to Java programming, covering essential concepts and practical applications in just 14 minutes.",
