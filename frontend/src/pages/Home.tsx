@@ -548,7 +548,7 @@ const Home = () => {
 
       {/* Main Content Area */}
       <main
-        className="flex-1 flex flex-col p-8 relative z-10 h-screen overflow-y-auto"
+        className="flex-1 flex flex-col p-8 relative z-10 overflow-y-auto"
         onClick={() => {
           setActiveProject(null);
           setHoveredProject(null);

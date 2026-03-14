@@ -163,7 +163,7 @@ const TutorialModules = ({
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto h-full flex flex-col gap-4 overflow-hidden pt-2 pb-4">
+    <div className="w-full max-w-5xl mx-auto h-full flex flex-col gap-4 overflow-hidden pt-2 pb-4" style={{ height: '1000px' }}>
       <div className="flex flex-col space-y-1 shrink-0">
         <h1 className="text-3xl font-display font-bold">Tutorial Modules</h1>
         <p className="text-muted-foreground text-sm">
